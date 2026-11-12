@@ -1,299 +1,284 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Moniesha Thilakarathna - PhD Candidate in Multimodal Robotic Grasping at the University of Canberra.">
-  <title>Moniesha Thilakarathna | Robotics Researcher</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Moniesha Thilakarathna - PhD Candidate at the Collaborative Robotics Lab, University of Canberra, specialising in multimodal robotic grasping and intelligent robotic manipulation.">
+
+    <title>Moniesha Thilakarathna | Robotics Researcher</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- MAIN STYLESHEET -->
+    <link rel="stylesheet" href="style.css?v=3">
+
 </head>
 
 <body>
-  <!-- NAVIGATION -->
-  <header class="site-header">
-    <nav class="nav container">
-      <a href="#home" class="logo">MT<span>.</span></a>
 
-      <button class="menu-toggle" aria-label="Toggle menu"
-              aria-expanded="false" aria-controls="nav-links">
-        ☰
-      </button>
+    <!-- ==========================================
+         HOMEPAGE
+         ========================================== -->
 
-      <div class="nav-links" id="nav-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </header>
+    <main>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero" id="home">
-      <div class="container hero-grid">
+        <section class="hero" id="home">
 
-        <div class="hero-content">
-          <div class="eyebrow">
-            <span class="status-dot"></span>
-            ROBOTICS RESEARCHER
-          </div>
+            <!-- ==================================
+                 LEFT PANEL
+                 ================================== -->
 
-          <p class="hero-greeting">Hello, I'm</p>
-          <h1>Moniesha<br><span>Thilakarathna.</span></h1>
+            <div class="hero-left">
 
-          <p class="hero-position">
-            PhD Candidate · Collaborative Robotics Lab<br>
-            University of Canberra, Australia
-          </p>
+                <!-- NAVIGATION -->
 
-          <div class="hero-divider"></div>
+                <header class="site-header">
 
-          <h2>Engineering Intelligent Robotic
-              Grasping for the Real World.</h2>
+                    <nav class="navbar"
+                         aria-label="Main navigation">
 
-          <p class="hero-description">
-            Exploring multimodal robotic grasping,
-            intelligent perception, and adaptive
-            decision-making to build robust robotic
-            manipulation systems for complex
-            real-world environments.
-          </p>
+                        <!-- LOGO -->
 
-          <div class="hero-buttons">
-            <a href="#research" class="btn btn-primary">
-              Explore My Research ↗
-            </a>
-            <a href="#contact" class="btn btn-outline">
-              Get in Touch
-            </a>
-          </div>
-        </div>
+                        <a href="#home"
+                           class="logo">
 
-        <div class="hero-visual">
-          <div class="portrait-frame">
-            <img src="assets/images/Moniesha.png"
-                 alt="Portrait of Moniesha Thilakarathna">
-          </div>
-          <div class="portrait-caption">
-            <span class="caption-line"></span>
-            RESEARCH · INNOVATION · ROBOTICS
-          </div>
-          <div class="floating-tag">
-            <span class="tag-dot"></span>
-            MULTIMODAL ROBOTIC GRASPING
-          </div>
-        </div>
+                            MT<span>.</span>
 
-      </div>
-      <div class="hero-bottom">
-        <span>SCROLL TO EXPLORE</span>
-        <span>↓</span>
-      </div>
-    </section>
+                        </a>
 
-    <!-- ABOUT -->
-    <section class="section about-section" id="about">
-      <div class="container">
-        <p class="section-label">01 / INTRODUCTION</p>
-        <div class="about-grid">
-          <div>
-            <h2 class="section-title">
-              About <span>Me.</span>
-            </h2>
-            <p class="about-lead">
-              Building intelligent robotic systems
-              that can perceive, adapt, and interact
-              with the physical world.
-            </p>
-          </div>
-          <div class="about-copy">
-            <p>
-              I am a PhD Candidate at the Collaborative
-              Robotics Lab, University of Canberra,
-              Australia, specialising in multimodal
-              robotic grasping and intelligent robotic
-              manipulation.
-            </p>
-            <p>
-              My research focuses on developing adaptable
-              and reliable robotic grasping systems
-              capable of handling diverse objects in
-              complex, unstructured environments.
-            </p>
-            <p>
-              My work spans soft robotic grasping,
-              6D grasp pose estimation, multimodal
-              grasp planning, experimental benchmarking,
-              and data-driven decision-making, with a
-              particular focus on robotic food waste
-              sorting applications.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+                        <!-- MOBILE MENU BUTTON -->
 
-    <!-- RESEARCH -->
-    <section class="section research-section" id="research">
-      <div class="container">
-        <p class="section-label">02 / RESEARCH FOCUS</p>
-        <h2 class="section-title">
-          Research <span>Interests.</span>
-        </h2>
-        <p class="section-intro">
-          My research combines robotic hardware,
-          perception, and intelligent decision-making
-          to advance real-world manipulation.
-        </p>
+                        <button
+                            class="menu-toggle"
+                            type="button"
+                            aria-label="Toggle navigation"
+                            aria-expanded="false"
+                            aria-controls="nav-links">
 
-        <div class="research-grid">
-          <article class="research-card">
-            <span class="card-number">01</span>
-            <div class="card-icon">◎</div>
-            <h3>Multimodal Robotic Grasping</h3>
-            <p>
-              Integrating rigid, soft, and suction-based
-              grasping modalities for adaptable robotic
-              manipulation of diverse objects.
-            </p>
-          </article>
+                            ☰
 
-          <article class="research-card">
-            <span class="card-number">02</span>
-            <div class="card-icon">◇</div>
-            <h3>Robotic Perception &amp; Grasp Planning</h3>
-            <p>
-              Exploring 6D grasp pose estimation,
-              grasp candidate evaluation, and
-              perception-driven manipulation in
-              cluttered environments.
-            </p>
-          </article>
+                        </button>
 
-          <article class="research-card">
-            <span class="card-number">03</span>
-            <div class="card-icon">↗</div>
-            <h3>Intelligent Decision-Making</h3>
-            <p>
-              Developing data-driven approaches
-              for grasp selection, multimodal
-              arbitration, and robust robotic
-              manipulation.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
+                        <!-- NAVIGATION LINKS -->
 
-    <!-- PROJECTS -->
-    <section class="section projects-section" id="projects">
-      <div class="container">
-        <p class="section-label">03 / SELECTED WORK</p>
-        <h2 class="section-title">
-          Featured <span>Projects.</span>
-        </h2>
+                        <div class="nav-links"
+                             id="nav-links">
 
-        <div class="project-grid">
-          <article class="project-card">
-            <div class="project-top">
-              <span>RESEARCH PROJECT</span>
-              <span>01 ↗</span>
+                            <a href="#home"
+                               class="active">
+                                Home
+                            </a>
+
+                            <a href="#about"
+                               class="future-link">
+                                About
+                            </a>
+
+                            <a href="#research"
+                               class="future-link">
+                                Research
+                            </a>
+
+                            <a href="#projects"
+                               class="future-link">
+                                Projects
+                            </a>
+
+                            <a href="#contact"
+                               class="future-link">
+                                Contact
+                            </a>
+
+                        </div>
+
+                    </nav>
+
+                </header>
+
+
+                <!-- ==================================
+                     INTRODUCTION
+                     ================================== -->
+
+                <div class="hero-content">
+
+                    <!-- NAME -->
+
+                    <h1>
+                        Moniesha<br>
+                        Thilakarathna
+                    </h1>
+
+
+                    <!-- ACCENT LINE -->
+
+                    <div class="hero-divider"></div>
+
+
+                    <!-- RESEARCH BIOGRAPHY -->
+
+                    <p class="hero-description">
+
+                        I am a PhD Candidate at the
+                        Collaborative Robotics Lab,
+                        University of Canberra, Australia,
+                        specialising in multimodal robotic
+                        grasping and intelligent robotic
+                        manipulation.
+
+                        My research focuses on developing
+                        adaptable and reliable robotic
+                        grasping systems capable of handling
+                        diverse objects in complex,
+                        unstructured environments.
+
+                        My work spans soft robotic grasping,
+                        6D grasp pose estimation, multimodal
+                        grasp planning, experimental
+                        benchmarking, and data-driven
+                        decision-making, with a particular
+                        focus on robotic food waste sorting
+                        applications.
+
+                    </p>
+
+
+                    <!-- BUTTONS -->
+
+                    <div class="hero-buttons">
+
+                        <a href="#research"
+                           class="btn btn-white future-link">
+
+                            Explore My Research
+                            <span aria-hidden="true">↗</span>
+
+                        </a>
+
+                        <a href="#contact"
+                           class="btn btn-teal future-link">
+
+                            Get in Touch
+
+                        </a>
+
+                    </div>
+
+                </div>
+
             </div>
-            <h3>FusionGrasp</h3>
-            <p>
-              A modular framework for harmonising
-              confidence scores from independent
-              grasp planners to enable multimodal
-              robotic grasp selection in clutter.
-            </p>
-            <div class="project-tags">
-              <span>Multimodal Grasping</span>
-              <span>Grasp Planning</span>
+
+
+            <!-- ==================================
+                 RIGHT PANEL
+                 ================================== -->
+
+            <div class="hero-right">
+
+                <!-- DECORATIVE CIRCLES -->
+
+                <div class="circle circle-one"
+                     aria-hidden="true"></div>
+
+                <div class="circle circle-two"
+                     aria-hidden="true"></div>
+
+
+                <!-- PORTRAIT -->
+
+                <div class="portrait-container">
+
+                    <img
+                        src="assets/images/Moniesha.png"
+                        alt="Moniesha Thilakarathna"
+                        class="portrait-image">
+
+                </div>
+
             </div>
-          </article>
 
-          <article class="project-card">
-            <div class="project-top">
-              <span>RESEARCH BENCHMARK</span>
-              <span>02 ↗</span>
-            </div>
-            <h3>GRAB Benchmark</h3>
-            <p>
-              A real-world grasping-in-clutter
-              performance evaluation benchmark
-              for robotic food waste sorting,
-              examining different gripper
-              technologies and clutter conditions.
-            </p>
-            <div class="project-tags">
-              <span>Robotic Benchmarking</span>
-              <span>Waste Sorting</span>
-            </div>
-            <a class="project-link"
-               href="https://moni9612.github.io/GRAB/"
-               target="_blank" rel="noopener noreferrer">
-              Explore Project ↗
-            </a>
-          </article>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- CONTACT -->
-    <section class="section contact-section" id="contact">
-      <div class="container contact-inner">
-        <p class="section-label">04 / CONNECT</p>
-        <h2>Let's connect<span>.</span></h2>
-        <p>
-          Interested in robotic grasping, intelligent
-          manipulation, or research collaboration?
-          I'd be happy to connect.
-        </p>
+    </main>
 
-        <div class="contact-links">
-          <a href="https://github.com/Moni9612"
-             target="_blank" rel="noopener noreferrer">
-            GitHub ↗
-          </a>
-          <!-- Add verified LinkedIn, Scholar and email links here -->
-        </div>
-        <p class="contact-affiliation">
-          Collaborative Robotics Lab<br>
-          University of Canberra · Australia
-        </p>
-      </div>
-    </section>
-  </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> Moniesha Thilakarathna</span>
-      <span>Designed for curiosity &amp; innovation.</span>
-    </div>
-  </footer>
+    <!-- ==========================================
+         JAVASCRIPT
+         ========================================== -->
 
-  <script>
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
+    <script>
 
-    const toggle = document.querySelector(".menu-toggle");
-    const links = document.querySelector(".nav-links");
+        // MOBILE NAVIGATION
 
-    toggle.addEventListener("click", () => {
-      const open = links.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", String(open));
-    });
+        const menuToggle =
+            document.querySelector(".menu-toggle");
 
-    document.querySelectorAll(".nav-links a").forEach(link => {
-      link.addEventListener("click", () => {
-        links.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
-      });
-    });
-  </script>
+        const navLinks =
+            document.querySelector(".nav-links");
+
+        menuToggle.addEventListener("click", () => {
+
+            const isOpen =
+                navLinks.classList.toggle("open");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+        });
+
+
+        // CLOSE MOBILE MENU AFTER SELECTION
+
+        document.querySelectorAll(".nav-links a")
+            .forEach(link => {
+
+                link.addEventListener("click", () => {
+
+                    navLinks.classList.remove("open");
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                });
+
+            });
+
+
+        // FUTURE SECTION LINKS
+        // Prevent navigation until sections are created.
+
+        document.querySelectorAll(".future-link")
+            .forEach(link => {
+
+                link.addEventListener("click", event => {
+
+                    event.preventDefault();
+
+                });
+
+            });
+
+    </script>
+
 </body>
-</html>
 
+</html>
