@@ -121,14 +121,17 @@ button {
     cursor: pointer;
 }
 
+
 /* ==========================================
-   MAIN HOMEPAGE BACKGROUND
+   HOMEPAGE - REDUCE EMPTY SPACE
    ========================================== */
 
 .hero {
     width: 100%;
-    min-height: calc(100vh - 80px);
-    min-height: calc(100svh - 80px);
+
+    /* Allow the section to fit its content */
+    min-height: 0;
+    height: auto;
 
     background:
         radial-gradient(
@@ -143,32 +146,37 @@ button {
             #032c4d 100%
         );
 
-    display: flex;
-    align-items: center;
+    display: block;
 }
 
 
+
+
 /* ==========================================
-   MOVE INTRODUCTION SECTION UPWARD
+   POSITION INTRODUCTION CLOSER TO TOP
    ========================================== */
 
 .hero-grid {
     display: grid;
 
-    grid-template-columns: minmax(0, 1.15fr)
-                           minmax(0, 0.85fr);
+    grid-template-columns:
+        minmax(0, 1.15fr)
+        minmax(0, 0.85fr);
 
     align-items: center;
 
     gap: clamp(35px, 5vw, 90px);
 
-    /* Move entire section closer to navigation */
-    padding-top: 35px;
-    padding-bottom: 75px;
+    /* Small gap below navigation */
+    padding-top: 45px;
 
-    /* Shift both text and photograph upward */
-    transform: translateY(-100px);
+    /* Small gap below introduction */
+    padding-bottom: 55px;
+
+    /* No artificial vertical shifting */
+    transform: none;
 }
+
 
 
 /* ==========================================
@@ -407,4 +415,28 @@ button {
     .btn {
         width: 100%;
     }
+}
+
+
+/* ==========================================
+   RESPONSIVE HOMEPAGE SPACING
+   ========================================== */
+
+@media (max-width: 950px) {
+
+    .hero-grid {
+        padding-top: 45px;
+        padding-bottom: 50px;
+        transform: none;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .hero-grid {
+        padding-top: 35px;
+        padding-bottom: 40px;
+    }
+
 }
