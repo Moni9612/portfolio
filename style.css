@@ -1,40 +1,37 @@
+
 /* =====================================================
    MONIESHA THILAKARATHNA
-   Academic Portfolio Website
-   Professional Blue Theme
+   ACADEMIC PORTFOLIO WEBSITE
+
+   DESIGN:
+   Deep Ocean Blue + Turquoise
+   Split-Screen Professional Homepage
    ===================================================== */
 
 
 /* =====================================================
-   GOOGLE FONTS
-   ===================================================== */
-
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
-
-
-/* =====================================================
-   COLOUR VARIABLES
+   COLOUR PALETTE
    ===================================================== */
 
 :root {
 
-    --primary-blue: #2563eb;
+    --ocean-blue: #05395f;
 
-    --dark-blue: #102c54;
+    --deep-blue: #032f52;
 
-    --navy-blue: #0b1f3a;
+    --midnight-blue: #042b4b;
 
-    --light-blue: #eff6ff;
+    --turquoise: #08c7c9;
 
-    --sky-blue: #60a5fa;
+    --turquoise-light: #32d8d8;
+
+    --ice-blue: #dff1fc;
+
+    --sky-blue: #b7e0f8;
 
     --white: #ffffff;
 
-    --text-dark: #243247;
-
-    --text-muted: #64748b;
-
-    --border-color: #e2eaf5;
+    --text-light: #e3eff7;
 
 }
 
@@ -51,18 +48,19 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 85px;
 }
 
 body {
 
     font-family: 'DM Sans', sans-serif;
 
-    color: var(--text-dark);
+    background: var(--ocean-blue);
 
-    background: var(--white);
+    color: var(--white);
 
-    line-height: 1.8;
+    line-height: 1.7;
+
+    overflow-x: hidden;
 
 }
 
@@ -71,39 +69,82 @@ a {
     color: inherit;
 }
 
-img {
-    max-width: 100%;
-    display: block;
+button {
+    font: inherit;
 }
 
-.container {
+img {
+    display: block;
+    max-width: 100%;
+}
 
-    width: min(1180px, 90%);
 
-    margin: 0 auto;
+/* =====================================================
+   MAIN HERO
+   ===================================================== */
+
+.hero {
+
+    display: grid;
+
+    grid-template-columns: 53% 47%;
+
+    min-height: 100vh;
+
+    min-height: 100svh;
+
+    width: 100%;
 
 }
 
 
 /* =====================================================
-   NAVIGATION BAR
+   LEFT PANEL
+   ===================================================== */
+
+.hero-left {
+
+    display: flex;
+
+    flex-direction: column;
+
+    position: relative;
+
+    min-width: 0;
+
+    background:
+        radial-gradient(
+            ellipse at 80% 90%,
+            rgba(0, 131, 166, 0.25),
+            transparent 55%
+        ),
+        linear-gradient(
+            145deg,
+            #073e64 0%,
+            #05375c 45%,
+            #032c4d 100%
+        );
+
+    padding: 0 clamp(28px, 5.5vw, 95px);
+
+}
+
+
+/* =====================================================
+   NAVIGATION
    ===================================================== */
 
 .site-header {
 
-    background: #ffffff;
+    width: 100%;
 
-    border-bottom: 1px solid #e6edf5;
+    position: relative;
 
-    position: sticky;
-
-    top: 0;
-
-    z-index: 1000;
+    z-index: 20;
 
 }
 
-.nav {
+.navbar {
 
     display: flex;
 
@@ -111,7 +152,9 @@ img {
 
     justify-content: space-between;
 
-    min-height: 85px;
+    gap: 30px;
+
+    min-height: 112px;
 
 }
 
@@ -122,16 +165,20 @@ img {
 
     font-family: 'Outfit', sans-serif;
 
-    font-size: 30px;
+    font-size: 38px;
 
     font-weight: 800;
 
-    color: var(--dark-blue);
+    letter-spacing: -1px;
+
+    color: white;
+
+    flex-shrink: 0;
 
 }
 
 .logo span {
-    color: var(--primary-blue);
+    color: var(--turquoise);
 }
 
 
@@ -143,22 +190,57 @@ img {
 
     align-items: center;
 
-    gap: 35px;
+    flex-wrap: wrap;
+
+    gap: clamp(14px, 2vw, 34px);
 
 }
 
 .nav-links a {
 
-    font-size: 14px;
+    position: relative;
 
-    font-weight: 600;
+    color: #f0f7fb;
 
-    color: #334155;
+    font-size: 13px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    padding: 8px 0;
 
 }
 
 .nav-links a:hover {
-    color: var(--primary-blue);
+    color: var(--turquoise);
+}
+
+
+/* ACTIVE NAVIGATION LINK */
+
+.nav-links a.active {
+
+    color: var(--turquoise);
+
+}
+
+.nav-links a.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 2px;
+
+    background: var(--turquoise);
+
 }
 
 
@@ -168,13 +250,13 @@ img {
 
     display: none;
 
-    background: none;
+    background: transparent;
 
     border: none;
 
-    font-size: 25px;
+    color: white;
 
-    color: var(--dark-blue);
+    font-size: 27px;
 
     cursor: pointer;
 
@@ -182,116 +264,37 @@ img {
 
 
 /* =====================================================
-   HERO SECTION
+   HERO CONTENT
    ===================================================== */
 
-.hero {
-
-    min-height: calc(100vh - 85px);
-
-    background: linear-gradient(
-        120deg,
-        #ffffff 0%,
-        #f4f8ff 55%,
-        #eaf2ff 100%
-    );
+.hero-content {
 
     display: flex;
 
-    align-items: center;
+    flex-direction: column;
 
-    padding: 75px 0 95px;
+    align-items: flex-start;
 
-    position: relative;
+    justify-content: center;
 
-    overflow: hidden;
+    flex: 1;
 
-}
+    padding: 55px 0 90px;
 
-
-/* TWO-COLUMN LAYOUT */
-
-.hero-grid {
-
-    display: grid;
-
-    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-
-    align-items: center;
-
-    gap: 70px;
+    max-width: 760px;
 
 }
 
 
 /* =====================================================
-   HERO LEFT CONTENT
+   NAME
    ===================================================== */
 
-.hero-content {
-
-    max-width: 650px;
-
-    min-width: 0;
-
-}
-
-
-/* RESEARCHER LABEL */
-
-.eyebrow {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-    color: var(--primary-blue);
-
-    font-size: 12px;
-
-    font-weight: 700;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 25px;
-
-}
-
-.status-dot {
-
-    width: 8px;
-
-    height: 8px;
-
-    background: var(--primary-blue);
-
-    border-radius: 50%;
-
-}
-
-
-/* HELLO TEXT */
-
-.hero-greeting {
-
-    color: #64748b;
-
-    font-size: 19px;
-
-    margin-bottom: 8px;
-
-}
-
-
-/* NAME */
-
-.hero h1 {
+.hero-content h1 {
 
     font-family: 'Outfit', sans-serif;
 
-    font-size: clamp(42px, 4.8vw, 72px);
+    font-size: clamp(46px, 4.8vw, 82px);
 
     font-weight: 700;
 
@@ -299,79 +302,51 @@ img {
 
     letter-spacing: -2px;
 
-    color: var(--dark-blue);
+    color: #ffffff;
 
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 
     overflow-wrap: anywhere;
 
 }
 
-.hero h1 span {
-    color: var(--primary-blue);
-}
 
-
-/* ACADEMIC POSITION */
-
-.hero-position {
-
-    font-size: 15px;
-
-    font-weight: 500;
-
-    color: #52657d;
-
-    line-height: 1.8;
-
-}
-
-
-/* DECORATIVE DIVIDER */
+/* =====================================================
+   TURQUOISE DIVIDER
+   ===================================================== */
 
 .hero-divider {
 
-    width: 65px;
+    width: 112px;
 
-    height: 3px;
+    height: 7px;
 
-    background: var(--primary-blue);
+    background: var(--turquoise);
 
-    margin: 30px 0;
+    border-radius: 10px;
 
-}
-
-
-/* MAIN RESEARCH HEADING */
-
-.hero-content h2 {
-
-    font-family: 'Outfit', sans-serif;
-
-    font-size: clamp(23px, 2.4vw, 32px);
-
-    font-weight: 600;
-
-    line-height: 1.4;
-
-    color: #153c73;
-
-    margin-bottom: 20px;
+    margin-bottom: 28px;
 
 }
 
 
-/* INTRODUCTION */
+/* =====================================================
+   BIOGRAPHY
+   ===================================================== */
 
 .hero-description {
 
-    font-size: 15px;
+    font-size: clamp(14px, 1.1vw, 17px);
 
-    color: #5b6b80;
+    font-weight: 400;
 
     line-height: 1.9;
 
-    max-width: 550px;
+    color: var(--text-light);
+
+    max-width: 690px;
+
+    text-align: left;
 
 }
 
@@ -384,13 +359,18 @@ img {
 
     display: flex;
 
-    gap: 15px;
-
-    margin-top: 35px;
+    align-items: center;
 
     flex-wrap: wrap;
 
+    gap: 25px;
+
+    margin-top: 45px;
+
 }
+
+
+/* GENERAL BUTTON */
 
 .btn {
 
@@ -400,120 +380,161 @@ img {
 
     justify-content: center;
 
-    padding: 13px 25px;
+    gap: 10px;
+
+    padding: 15px 28px;
+
+    min-height: 54px;
+
+    border-radius: 5px;
 
     font-size: 14px;
 
-    font-weight: 600;
-
-    border-radius: 7px;
+    font-weight: 700;
 
     text-align: center;
 
-}
-
-
-/* PRIMARY BUTTON */
-
-.btn-primary {
-
-    background: var(--primary-blue);
-
-    color: white;
+    white-space: nowrap;
 
 }
 
-.btn-primary:hover {
-    background: #1d4ed8;
-}
 
+/* WHITE BUTTON */
 
-/* SECONDARY BUTTON */
+.btn-white {
 
-.btn-outline {
+    background: #ffffff;
 
-    border: 1.5px solid var(--primary-blue);
-
-    color: var(--primary-blue);
-
-    background: transparent;
+    color: #06375c;
 
 }
 
-.btn-outline:hover {
-    background: #eff6ff;
+.btn-white:hover {
+
+    background: #edf7ff;
+
+}
+
+
+/* TURQUOISE BUTTON */
+
+.btn-teal {
+
+    background: var(--turquoise);
+
+    color: #032f52;
+
+}
+
+.btn-teal:hover {
+
+    background: var(--turquoise-light);
+
 }
 
 
 /* =====================================================
-   HERO RIGHT CONTENT
-   PORTRAIT
+   RIGHT PANEL
    ===================================================== */
 
-.hero-visual {
+.hero-right {
 
     position: relative;
 
-    width: 100%;
+    min-width: 0;
 
-    max-width: 450px;
+    min-height: 100vh;
 
-    margin: auto;
+    min-height: 100svh;
 
-    padding: 20px;
-
-}
-
-
-/* DECORATIVE BLUE BACKGROUND */
-
-.hero-visual::before {
-
-    content: "";
-
-    position: absolute;
-
-    width: 85%;
-
-    height: 85%;
-
-    background: #dbeafe;
-
-    border-radius: 25px;
-
-    top: 0;
-
-    right: 0;
-
-    z-index: 0;
-
-}
-
-
-/* PORTRAIT FRAME */
-
-.portrait-frame {
-
-    position: relative;
-
-    width: 100%;
-
-    aspect-ratio: 4 / 5;
+    background:
+        linear-gradient(
+            135deg,
+            #edf8ff 0%,
+            #d5edfc 55%,
+            #b8e0f8 100%
+        );
 
     overflow: hidden;
 
-    border-radius: 18px;
+}
 
-    box-shadow: 0 20px 50px rgba(37, 99, 235, 0.15);
 
-    z-index: 1;
+/* =====================================================
+   DECORATIVE CIRCLES
+   ===================================================== */
+
+.circle {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+}
+
+
+/* OUTER CIRCLE */
+
+.circle-one {
+
+    width: 82%;
+
+    aspect-ratio: 1 / 1;
+
+    border: 28px solid rgba(255,255,255,0.32);
+
+    top: 18%;
+
+    left: 8%;
+
+}
+
+
+/* INNER CIRCLE */
+
+.circle-two {
+
+    width: 60%;
+
+    aspect-ratio: 1 / 1;
+
+    border: 18px solid rgba(255,255,255,0.20);
+
+    top: 28%;
+
+    left: 20%;
+
+}
+
+
+/* =====================================================
+   PORTRAIT
+   ===================================================== */
+
+.portrait-container {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    z-index: 2;
+
+    overflow: hidden;
 
 }
 
 
 /* PORTRAIT IMAGE */
 
-.portrait-frame img {
+.portrait-image {
 
     width: 100%;
 
@@ -521,620 +542,119 @@ img {
 
     object-fit: cover;
 
-    object-position: center 30%;
-
-}
-
-
-/* PORTRAIT CAPTION */
-
-.portrait-caption {
-
-    position: relative;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-    margin-top: 22px;
-
-    color: #64748b;
-
-    font-size: 10px;
-
-    letter-spacing: 1.5px;
-
-    z-index: 1;
-
-}
-
-.caption-line {
-
-    width: 25px;
-
-    height: 2px;
-
-    background: var(--primary-blue);
-
-    flex-shrink: 0;
-
-}
-
-
-/* FLOATING RESEARCH LABEL */
-
-.floating-tag {
-
-    position: absolute;
-
-    bottom: 95px;
-
-    left: -15px;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-    background: white;
-
-    padding: 15px 18px;
-
-    border-radius: 8px;
-
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
-
-    color: #153c73;
-
-    font-size: 11px;
-
-    font-weight: 700;
-
-    letter-spacing: 0.5px;
-
-    z-index: 2;
-
-}
-
-.tag-dot {
-
-    width: 8px;
-
-    height: 8px;
-
-    background: var(--primary-blue);
-
-    border-radius: 50%;
-
-    flex-shrink: 0;
-
-}
-
-
-/* SCROLL INDICATOR */
-
-.hero-bottom {
-
-    position: absolute;
-
-    bottom: 25px;
-
-    left: 5%;
-
-    display: flex;
-
-    gap: 15px;
-
-    color: #64748b;
-
-    font-size: 11px;
-
-    letter-spacing: 2px;
+    object-position: center 28%;
 
 }
 
 
 /* =====================================================
-   GENERAL SECTION STYLING
+   RESPONSIVE DESIGN - SMALL DESKTOP
    ===================================================== */
 
-.section {
+@media (max-width: 1200px) {
 
-    padding: 105px 0;
+    .hero {
 
-}
+        grid-template-columns: 55% 45%;
 
-.section-label {
+    }
 
-    color: var(--primary-blue);
+    .hero-left {
 
-    font-size: 12px;
+        padding-left: 5%;
 
-    font-weight: 700;
+        padding-right: 5%;
 
-    letter-spacing: 2px;
+    }
 
-    margin-bottom: 20px;
+    .navbar {
 
-}
+        gap: 20px;
 
-.section-title {
+    }
 
-    font-family: 'Outfit', sans-serif;
+    .nav-links {
 
-    font-size: clamp(35px, 4vw, 50px);
+        gap: 17px;
 
-    color: var(--dark-blue);
+    }
 
-    margin-bottom: 30px;
+    .nav-links a {
 
-    line-height: 1.3;
+        font-size: 12px;
 
-}
+    }
 
-.section-title span {
-    color: var(--primary-blue);
-}
+    .hero-content h1 {
 
-.section-intro {
+        font-size: clamp(42px, 4.6vw, 65px);
 
-    max-width: 650px;
+    }
 
-    color: var(--text-muted);
+    .hero-description {
 
-    margin-bottom: 45px;
+        font-size: 14px;
 
-}
-
-
-/* =====================================================
-   ABOUT ME SECTION
-   ===================================================== */
-
-.about-section {
-
-    background: white;
-
-}
-
-.about-grid {
-
-    display: grid;
-
-    grid-template-columns: 1fr 1.2fr;
-
-    gap: 85px;
-
-}
-
-.about-lead {
-
-    font-family: 'Outfit', sans-serif;
-
-    font-size: 25px;
-
-    font-weight: 500;
-
-    line-height: 1.5;
-
-    color: #1e3a5f;
-
-}
-
-.about-copy p {
-
-    color: #52657d;
-
-    margin-bottom: 20px;
-
-    font-size: 15px;
+    }
 
 }
 
 
 /* =====================================================
-   RESEARCH SECTION
-   ===================================================== */
-
-.research-section {
-
-    background: #f3f7ff;
-
-}
-
-.research-grid {
-
-    display: grid;
-
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-
-    gap: 25px;
-
-}
-
-
-/* RESEARCH CARDS */
-
-.research-card {
-
-    background: white;
-
-    padding: 35px 30px;
-
-    border-radius: 12px;
-
-    border: 1px solid #e1eafa;
-
-    position: relative;
-
-    box-shadow: 0 8px 25px rgba(20, 60, 120, 0.04);
-
-}
-
-.research-card:hover {
-
-    border-color: #93c5fd;
-
-    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.1);
-
-}
-
-
-/* CARD NUMBER */
-
-.card-number {
-
-    position: absolute;
-
-    top: 25px;
-
-    right: 25px;
-
-    color: #94a3b8;
-
-    font-size: 12px;
-
-}
-
-
-/* CARD ICON */
-
-.card-icon {
-
-    font-size: 38px;
-
-    color: var(--primary-blue);
-
-    margin-bottom: 25px;
-
-}
-
-
-/* CARD TITLE */
-
-.research-card h3 {
-
-    font-family: 'Outfit', sans-serif;
-
-    font-size: 21px;
-
-    color: #153c73;
-
-    margin-bottom: 15px;
-
-    line-height: 1.4;
-
-}
-
-
-/* CARD DESCRIPTION */
-
-.research-card p {
-
-    color: #64748b;
-
-    font-size: 14px;
-
-}
-
-
-/* =====================================================
-   FEATURED PROJECTS
-   ===================================================== */
-
-.projects-section {
-
-    background: white;
-
-}
-
-.project-grid {
-
-    display: grid;
-
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    gap: 25px;
-
-}
-
-
-/* PROJECT CARDS */
-
-.project-card {
-
-    background: #f8fbff;
-
-    border: 1px solid #e2eaf5;
-
-    padding: 38px;
-
-    border-radius: 12px;
-
-}
-
-.project-card:hover {
-
-    border-color: #93c5fd;
-
-    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.08);
-
-}
-
-
-/* PROJECT HEADER */
-
-.project-top {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 15px;
-
-    color: var(--primary-blue);
-
-    font-size: 11px;
-
-    font-weight: 700;
-
-    letter-spacing: 1.5px;
-
-    margin-bottom: 40px;
-
-}
-
-
-/* PROJECT TITLE */
-
-.project-card h3 {
-
-    font-family: 'Outfit', sans-serif;
-
-    font-size: 30px;
-
-    color: #153c73;
-
-    margin-bottom: 15px;
-
-}
-
-
-/* PROJECT DESCRIPTION */
-
-.project-card p {
-
-    color: #64748b;
-
-    font-size: 14px;
-
-}
-
-
-/* PROJECT TAGS */
-
-.project-tags {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 8px;
-
-    margin-top: 25px;
-
-}
-
-.project-tags span {
-
-    background: #e8f1ff;
-
-    color: var(--primary-blue);
-
-    padding: 6px 12px;
-
-    border-radius: 20px;
-
-    font-size: 11px;
-
-    font-weight: 600;
-
-}
-
-
-/* PROJECT LINKS */
-
-.project-link {
-
-    display: inline-block;
-
-    margin-top: 25px;
-
-    color: var(--primary-blue);
-
-    font-weight: 700;
-
-    font-size: 13px;
-
-}
-
-.project-link:hover {
-    text-decoration: underline;
-}
-
-
-/* =====================================================
-   CONTACT SECTION
-   ===================================================== */
-
-.contact-section {
-
-    background: var(--dark-blue);
-
-    color: white;
-
-    text-align: center;
-
-}
-
-.contact-inner {
-
-    max-width: 750px;
-
-}
-
-.contact-section .section-label {
-
-    color: #93c5fd;
-
-}
-
-.contact-section h2 {
-
-    font-family: 'Outfit', sans-serif;
-
-    font-size: clamp(40px, 5vw, 60px);
-
-    margin-bottom: 20px;
-
-}
-
-.contact-section h2 span {
-    color: #60a5fa;
-}
-
-.contact-section p {
-
-    color: #cbd5e1;
-
-}
-
-.contact-links {
-
-    display: flex;
-
-    justify-content: center;
-
-    flex-wrap: wrap;
-
-    gap: 30px;
-
-    margin: 35px 0;
-
-}
-
-.contact-links a {
-
-    color: #93c5fd;
-
-    font-weight: 600;
-
-}
-
-.contact-links a:hover {
-    color: white;
-}
-
-.contact-affiliation {
-
-    font-size: 13px;
-
-}
-
-
-/* =====================================================
-   FOOTER
-   ===================================================== */
-
-.footer {
-
-    background: #081b35;
-
-    color: #94a3b8;
-
-    padding: 25px 0;
-
-    font-size: 12px;
-
-}
-
-.footer-inner {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 20px;
-
-}
-
-
-/* =====================================================
-   TABLET RESPONSIVENESS
+   RESPONSIVE DESIGN - TABLETS
    ===================================================== */
 
 @media (max-width: 950px) {
 
-    .hero-grid {
+    .hero {
 
         grid-template-columns: 1fr;
 
-        gap: 55px;
+    }
+
+    .hero-left {
+
+        padding: 0 7%;
+
+    }
+
+    .navbar {
+
+        min-height: 95px;
 
     }
 
     .hero-content {
 
-        max-width: 750px;
+        padding: 70px 0 85px;
+
+        max-width: 760px;
 
     }
 
-    .hero-visual {
+    .hero-content h1 {
 
-        max-width: 420px;
-
-    }
-
-    .about-grid {
-
-        grid-template-columns: 1fr;
-
-        gap: 30px;
+        font-size: clamp(45px, 7vw, 70px);
 
     }
 
-    .research-grid {
+    .hero-description {
 
-        grid-template-columns: 1fr;
+        font-size: 15px;
 
     }
 
-    .project-grid {
+    .hero-right {
 
-        grid-template-columns: 1fr;
+        min-height: 600px;
+
+        height: 600px;
+
+    }
+
+    .portrait-image {
+
+        object-position: center 25%;
 
     }
 
@@ -1142,10 +662,34 @@ img {
 
 
 /* =====================================================
-   MOBILE RESPONSIVENESS
+   RESPONSIVE DESIGN - MOBILE
    ===================================================== */
 
 @media (max-width: 650px) {
+
+    .hero-left {
+
+        padding: 0 7%;
+
+    }
+
+    .navbar {
+
+        min-height: 80px;
+
+    }
+
+    .logo {
+
+        font-size: 33px;
+
+    }
+
+    .menu-toggle {
+
+        display: block;
+
+    }
 
     .nav-links {
 
@@ -1153,85 +697,138 @@ img {
 
         position: absolute;
 
-        top: 85px;
+        top: 80px;
 
-        left: 0;
+        left: -7%;
 
-        right: 0;
+        right: -7%;
 
-        background: white;
+        padding: 22px 7% 30px;
 
-        padding: 25px;
+        background: #032f52;
 
         flex-direction: column;
 
-        gap: 20px;
+        align-items: flex-start;
 
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        gap: 15px;
+
+        box-shadow: 0 15px 25px rgba(0,0,0,0.15);
 
     }
 
     .nav-links.open {
+
         display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .hero {
-
-        padding: 65px 0 100px;
 
     }
 
-    .hero h1 {
+    .nav-links a {
 
-        font-size: clamp(35px, 9vw, 46px);
-
-        letter-spacing: -1.5px;
+        font-size: 14px;
 
     }
 
-    .hero-visual {
+    .hero-content {
 
-        width: 90%;
-
-    }
-
-    .floating-tag {
-
-        left: -10px;
-
-        font-size: 9px;
-
-        max-width: 95%;
+        padding: 55px 0 75px;
 
     }
 
-    .section {
+    .hero-content h1 {
 
-        padding: 75px 0;
+        font-size: clamp(37px, 10vw, 52px);
 
-    }
+        letter-spacing: -1px;
 
-    .about-lead {
-
-        font-size: 22px;
+        margin-bottom: 25px;
 
     }
 
-    .project-card {
+    .hero-divider {
 
-        padding: 28px;
+        width: 85px;
+
+        height: 5px;
+
+        margin-bottom: 25px;
 
     }
 
-    .footer-inner {
+    .hero-description {
+
+        font-size: 14px;
+
+        line-height: 1.85;
+
+    }
+
+    .hero-buttons {
+
+        gap: 12px;
+
+        margin-top: 35px;
+
+    }
+
+    .btn {
+
+        padding: 13px 20px;
+
+        font-size: 12px;
+
+        min-height: 48px;
+
+    }
+
+    .hero-right {
+
+        min-height: 440px;
+
+        height: 440px;
+
+    }
+
+    .circle-one {
+
+        border-width: 18px;
+
+    }
+
+    .circle-two {
+
+        border-width: 12px;
+
+    }
+
+}
+
+
+/* =====================================================
+   EXTRA SMALL MOBILE
+   ===================================================== */
+
+@media (max-width: 380px) {
+
+    .hero-content h1 {
+
+        font-size: 34px;
+
+    }
+
+    .hero-buttons {
 
         flex-direction: column;
 
-        text-align: center;
+        align-items: stretch;
+
+        width: 100%;
+
+    }
+
+    .btn {
+
+        width: 100%;
 
     }
 
