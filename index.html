@@ -3,271 +3,197 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="Moniesha Thilakarathna - PhD Candidate specialising in multimodal robotic grasping at the University of Canberra.">
 
-    <meta name="description"
-          content="Moniesha Thilakarathna - PhD Candidate at the Collaborative Robotics Lab, University of Canberra, specialising in multimodal robotic grasping and intelligent robotic manipulation.">
+  <title>Moniesha Thilakarathna | Robotics Researcher</title>
 
-    <title>Moniesha Thilakarathna | Robotics Researcher</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet">
-
-    <!-- MAIN STYLESHEET -->
-    <link rel="stylesheet" href="style.css?v=3">
-
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 
 <body>
 
-    <!-- ==========================================
-         HOMEPAGE
-         ========================================== -->
+  <!-- ========================================
+       FULL-WIDTH NAVIGATION
+       ======================================== -->
 
-    <main>
+  <header class="site-header">
 
-        <section class="hero" id="home">
+    <nav class="navbar container"
+         aria-label="Main navigation">
 
-            <!-- ==================================
-                 LEFT PANEL
-                 ================================== -->
+      <a href="#home" class="logo">
+        MT<span>.</span>
+      </a>
 
-            <div class="hero-left">
+      <button class="menu-toggle"
+              type="button"
+              aria-label="Toggle navigation"
+              aria-expanded="false"
+              aria-controls="nav-links">
+        ☰
+      </button>
 
-                <!-- NAVIGATION -->
+      <div class="nav-links" id="nav-links">
 
-                <header class="site-header">
+        <a href="#home" class="active">Home</a>
 
-                    <nav class="navbar"
-                         aria-label="Main navigation">
+        <a href="#about" class="future-link">About</a>
 
-                        <!-- LOGO -->
+        <a href="#research" class="future-link">Research</a>
 
-                        <a href="#home"
-                           class="logo">
+        <a href="#projects" class="future-link">Projects</a>
 
-                            MT<span>.</span>
+        <a href="#contact" class="future-link">Contact</a>
 
-                        </a>
+      </div>
 
-                        <!-- MOBILE MENU BUTTON -->
+    </nav>
 
-                        <button
-                            class="menu-toggle"
-                            type="button"
-                            aria-label="Toggle navigation"
-                            aria-expanded="false"
-                            aria-controls="nav-links">
+  </header>
 
-                            ☰
 
-                        </button>
+  <!-- ========================================
+       HOMEPAGE INTRODUCTION
+       ======================================== -->
 
-                        <!-- NAVIGATION LINKS -->
+  <main>
 
-                        <div class="nav-links"
-                             id="nav-links">
+    <section class="hero" id="home">
 
-                            <a href="#home"
-                               class="active">
-                                Home
-                            </a>
+      <div class="container hero-grid">
 
-                            <a href="#about"
-                               class="future-link">
-                                About
-                            </a>
+        <!-- LEFT: NAME AND BIOGRAPHY -->
 
-                            <a href="#research"
-                               class="future-link">
-                                Research
-                            </a>
+        <div class="hero-content">
 
-                            <a href="#projects"
-                               class="future-link">
-                                Projects
-                            </a>
+          <h1>
+            Moniesha<br>
+            Thilakarathna
+          </h1>
 
-                            <a href="#contact"
-                               class="future-link">
-                                Contact
-                            </a>
+          <div class="hero-divider"></div>
 
-                        </div>
+          <p class="hero-description">
+            I am a PhD Candidate at the Collaborative
+            Robotics Lab, University of Canberra,
+            Australia, specialising in multimodal
+            robotic grasping and intelligent robotic
+            manipulation. My research focuses on
+            developing adaptable and reliable robotic
+            grasping systems capable of handling
+            diverse objects in complex, unstructured
+            environments. My work spans soft robotic
+            grasping, 6D grasp pose estimation,
+            multimodal grasp planning, experimental
+            benchmarking, and data-driven
+            decision-making, with a particular focus
+            on robotic food waste sorting applications.
+          </p>
 
-                    </nav>
+          <div class="hero-buttons">
 
-                </header>
+            <a href="#research"
+               class="btn btn-white future-link">
+              Explore My Research ↗
+            </a>
 
+            <a href="#contact"
+               class="btn btn-teal future-link">
+              Get in Touch
+            </a>
 
-                <!-- ==================================
-                     INTRODUCTION
-                     ================================== -->
+          </div>
 
-                <div class="hero-content">
+        </div>
 
-                    <!-- NAME -->
 
-                    <h1>
-                        Moniesha<br>
-                        Thilakarathna
-                    </h1>
+        <!-- RIGHT: SMALLER PORTRAIT -->
 
+        <div class="hero-visual">
 
-                    <!-- ACCENT LINE -->
+          <div class="portrait-frame">
 
-                    <div class="hero-divider"></div>
+            <img
+              src="assets/images/Moniesha.png"
+              alt="Portrait of Moniesha Thilakarathna">
 
+          </div>
 
-                    <!-- RESEARCH BIOGRAPHY -->
+        </div>
 
-                    <p class="hero-description">
+      </div>
 
-                        I am a PhD Candidate at the
-                        Collaborative Robotics Lab,
-                        University of Canberra, Australia,
-                        specialising in multimodal robotic
-                        grasping and intelligent robotic
-                        manipulation.
+    </section>
 
-                        My research focuses on developing
-                        adaptable and reliable robotic
-                        grasping systems capable of handling
-                        diverse objects in complex,
-                        unstructured environments.
+  </main>
 
-                        My work spans soft robotic grasping,
-                        6D grasp pose estimation, multimodal
-                        grasp planning, experimental
-                        benchmarking, and data-driven
-                        decision-making, with a particular
-                        focus on robotic food waste sorting
-                        applications.
 
-                    </p>
+  <!-- ========================================
+       MOBILE NAVIGATION
+       ======================================== -->
 
+  <script>
 
-                    <!-- BUTTONS -->
+    const menuToggle =
+      document.querySelector(".menu-toggle");
 
-                    <div class="hero-buttons">
+    const navLinks =
+      document.querySelector(".nav-links");
 
-                        <a href="#research"
-                           class="btn btn-white future-link">
+    menuToggle.addEventListener("click", () => {
 
-                            Explore My Research
-                            <span aria-hidden="true">↗</span>
+      const isOpen =
+        navLinks.classList.toggle("open");
 
-                        </a>
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
 
-                        <a href="#contact"
-                           class="btn btn-teal future-link">
+    });
 
-                            Get in Touch
+    document.querySelectorAll(".nav-links a")
+      .forEach(link => {
 
-                        </a>
+        link.addEventListener("click", () => {
 
-                    </div>
+          navLinks.classList.remove("open");
 
-                </div>
-
-            </div>
-
-
-           
-<!-- RIGHT PANEL -->
-
-<div class="hero-right">
-
-    <div class="portrait-container">
-
-        <img
-            src="assets/images/Moniesha.png"
-            alt="Moniesha Thilakarathna"
-            class="portrait-image">
-
-    </div>
-
-</div>
-
-
-        </section>
-
-    </main>
-
-
-    <!-- ==========================================
-         JAVASCRIPT
-         ========================================== -->
-
-    <script>
-
-        // MOBILE NAVIGATION
-
-        const menuToggle =
-            document.querySelector(".menu-toggle");
-
-        const navLinks =
-            document.querySelector(".nav-links");
-
-        menuToggle.addEventListener("click", () => {
-
-            const isOpen =
-                navLinks.classList.toggle("open");
-
-            menuToggle.setAttribute(
-                "aria-expanded",
-                String(isOpen)
-            );
+          menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+          );
 
         });
 
+      });
 
-        // CLOSE MOBILE MENU AFTER SELECTION
+    // Sections will be added later.
 
-        document.querySelectorAll(".nav-links a")
-            .forEach(link => {
+    document.querySelectorAll(".future-link")
+      .forEach(link => {
 
-                link.addEventListener("click", () => {
+        link.addEventListener("click", event => {
+          event.preventDefault();
+        });
 
-                    navLinks.classList.remove("open");
+      });
 
-                    menuToggle.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
-
-                });
-
-            });
-
-
-        // FUTURE SECTION LINKS
-        // Prevent navigation until sections are created.
-
-        document.querySelectorAll(".future-link")
-            .forEach(link => {
-
-                link.addEventListener("click", event => {
-
-                    event.preventDefault();
-
-                });
-
-            });
-
-    </script>
+  </script>
 
 </body>
-
 </html>
