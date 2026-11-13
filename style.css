@@ -570,12 +570,13 @@ button {
 /* Align button with bottom of first name line */
 
 .hero-top-contact {
-    position: static;
+    position: relative;
+    top: -12px;  /* Raise the button by 12px */
+
     flex-shrink: 0;
     display: flex;
     align-items: flex-end;
 
-    height: clamp(43px, 4.5vw, 72px);
     height: calc(clamp(43px, 4.5vw, 72px) * 1.13);
 }
 
