@@ -208,13 +208,18 @@ button {
 
 /* BIOGRAPHY */
 
+
 .hero-description {
     max-width: 660px;
     font-size: 15px;
     line-height: 1.9;
     color: var(--light-text);
-    text-align: left;
+
+    /* Justify paragraph */
+    text-align: justify;
+    text-justify: inter-word;
 }
+
 
 /* BUTTONS */
 
