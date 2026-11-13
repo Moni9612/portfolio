@@ -440,3 +440,89 @@ button {
     }
 
 }
+
+/* ==========================================
+   RESEARCH AREAS STRIP
+   ========================================== */
+
+/* Dark background matching top navigation */
+
+.expertise-strip {
+    width: 100%;
+    background: #053456;
+
+    padding: 35px 0;
+}
+
+/* Four equally sized cards */
+
+.expertise-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 25px;
+
+    align-items: stretch;
+}
+
+/* Turquoise cards */
+
+.expertise-card {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 95px;
+
+    padding: 20px 15px;
+
+    background: #08c7c9;
+
+    color: #032e50;
+
+    font-family: 'DM Sans', sans-serif;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    text-align: center;
+
+    border-radius: 5px;
+}
+
+/* Tablet */
+
+@media (max-width: 950px) {
+
+    .expertise-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .expertise-card {
+        min-height: 85px;
+        font-size: 15px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .expertise-strip {
+        padding: 28px 0;
+    }
+
+    .expertise-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .expertise-card {
+        min-height: 80px;
+        padding: 15px 10px;
+        font-size: 13px;
+    }
+}
