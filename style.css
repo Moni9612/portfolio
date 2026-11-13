@@ -182,7 +182,9 @@ button {
    ========================================== */
 
 .hero-content {
+    position: relative;
     min-width: 0;
+    max-width: 660px;
 }
 
 .hero-content h1 {
