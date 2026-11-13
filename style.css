@@ -529,3 +529,42 @@ button {
         font-size: 13px;
     }
 }
+
+/* ==========================================
+   TOP-RIGHT GET IN TOUCH BUTTON
+   ========================================== */
+
+.hero-content {
+    position: relative;
+}
+
+/* Place button at top-right of introduction */
+
+.hero-top-contact {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+/* Make the button smaller */
+
+.hero-top-contact .btn {
+    min-height: 38px;
+    padding: 9px 17px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+/* Prevent overlap on smaller screens */
+
+@media (max-width: 650px) {
+
+    .hero-top-contact {
+        position: static;
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 25px;
+    }
+
+}
