@@ -532,35 +532,54 @@ button {
     }
 }
 
+
 /* ==========================================
-   TOP-RIGHT GET IN TOUCH BUTTON
+   NAME AND GET IN TOUCH BUTTON ALIGNMENT
    ========================================== */
 
 .hero-content {
     position: relative;
+    min-width: 0;
+    max-width: 660px;
 }
 
-/* Align Get in Touch button with first line of name */
+/* Name and button in the same row */
 
+.hero-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 28px;
+}
+
+/* Preserve the existing heading appearance */
+
+.hero-heading h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(43px, 4.5vw, 72px);
+    font-weight: 700;
+    line-height: 1.13;
+    letter-spacing: -1.8px;
+    color: #ffffff;
+    margin: 0;
+    overflow-wrap: normal;
+}
+
+/* Align button with bottom of first name line */
 
 .hero-top-contact {
-    position: absolute;
-
-    top: 0;
-    right: 0;
-
-    height: 1.13em;
-
+    position: static;
+    flex-shrink: 0;
     display: flex;
     align-items: flex-end;
-    justify-content: flex-end;
 
-    z-index: 2;
+    height: clamp(43px, 4.5vw, 72px);
+    height: calc(clamp(43px, 4.5vw, 72px) * 1.13);
 }
 
-
-
-/* Make the button smaller */
+/* Smaller contact button */
 
 .hero-top-contact .btn {
     min-height: 38px;
@@ -569,15 +588,35 @@ button {
     border-radius: 5px;
 }
 
-/* Prevent overlap on smaller screens */
+/* ==========================================
+   RESPONSIVE ALIGNMENT
+   ========================================== */
+
+@media (max-width: 950px) {
+
+    .hero-heading h1 {
+        font-size: clamp(36px, 5vw, 60px);
+    }
+
+    .hero-top-contact {
+        height: calc(clamp(36px, 5vw, 60px) * 1.13);
+    }
+}
 
 @media (max-width: 650px) {
 
-    .hero-top-contact {
-        position: static;
-        display: flex;
-        justify-content: flex-end;
-        margin-bottom: 25px;
+    .hero-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
     }
 
+    .hero-heading h1 {
+        font-size: clamp(36px, 9vw, 52px);
+    }
+
+    .hero-top-contact {
+        height: auto;
+        align-self: flex-start;
+    }
 }
