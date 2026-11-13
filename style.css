@@ -540,14 +540,17 @@ button {
     position: relative;
 }
 
-/* Place button at top-right of introduction */
+/* Align Get in Touch button with first line of name */
 
 .hero-top-contact {
     position: absolute;
-    top: 0;
+
+    top: 58px;
     right: 0;
+
     z-index: 2;
 }
+
 
 /* Make the button smaller */
 
