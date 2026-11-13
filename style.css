@@ -542,14 +542,22 @@ button {
 
 /* Align Get in Touch button with first line of name */
 
+
 .hero-top-contact {
     position: absolute;
 
-    top: 58px;
+    top: 0;
     right: 0;
+
+    height: 1.13em;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 
     z-index: 2;
 }
+
 
 
 /* Make the button smaller */
