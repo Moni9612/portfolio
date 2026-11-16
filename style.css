@@ -371,21 +371,22 @@ button {
 
 /* PORTRAIT FRAME */
 
+
 .portrait-frame {
     width: min(100%, 350px);
 
-    height: 420px;
+    /* Match the full height of left content */
+    height: 100%;
+
     aspect-ratio: auto;
 
     overflow: hidden;
-
     border-radius: 6px;
-
     background: #dceefa;
 
-    box-shadow:
-        0 18px 45px rgba(0,0,0,0.18);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.18);
 }
+
 
 
 /* PORTRAIT IMAGE */
