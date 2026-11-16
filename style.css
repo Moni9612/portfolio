@@ -12,7 +12,10 @@
     --light-text: #e2eff7;
 }
 
-/* GENERAL */
+
+/* ==========================================
+   GENERAL
+   ========================================== */
 
 * {
     margin: 0;
@@ -45,12 +48,16 @@ button {
     font: inherit;
 }
 
-/* CENTRED CONTENT */
+
+/* ==========================================
+   CENTRED CONTENT
+   ========================================== */
 
 .container {
     width: min(1200px, 90%);
     margin: 0 auto;
 }
+
 
 /* ==========================================
    NAVIGATION BAR
@@ -59,29 +66,41 @@ button {
 .site-header {
     width: 100%;
     background: #053456;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.1);
 }
 
 .navbar {
     min-height: 80px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 30px;
 }
+
+
+/* LOGO */
 
 .logo {
     font-family: 'Outfit', sans-serif;
     font-size: 32px;
     font-weight: 800;
+
     color: #ffffff;
     letter-spacing: -1px;
+
     flex-shrink: 0;
 }
 
 .logo span {
     color: var(--teal);
 }
+
+
+/* NAVIGATION LINKS */
 
 .nav-links {
     display: flex;
@@ -93,6 +112,7 @@ button {
     font-size: 14px;
     font-weight: 600;
     color: #ffffff;
+
     position: relative;
     padding: 8px 0;
 }
@@ -104,32 +124,40 @@ button {
 
 .nav-links a.active::after {
     content: "";
+
     position: absolute;
     bottom: 0;
     left: 0;
+
     width: 100%;
     height: 2px;
+
     background: var(--teal);
 }
 
+
+/* MOBILE MENU BUTTON */
+
 .menu-toggle {
     display: none;
+
     background: none;
     border: none;
+
     color: white;
     font-size: 27px;
+
     cursor: pointer;
 }
 
 
 /* ==========================================
-   HOMEPAGE - REDUCE EMPTY SPACE
+   HOMEPAGE BACKGROUND
    ========================================== */
 
 .hero {
     width: 100%;
 
-    /* Allow the section to fit its content */
     min-height: 0;
     height: auto;
 
@@ -148,10 +176,8 @@ button {
 }
 
 
-
-
 /* ==========================================
-   POSITION INTRODUCTION CLOSER TO TOP
+   HOMEPAGE GRID
    ========================================== */
 
 .hero-grid {
@@ -161,20 +187,15 @@ button {
         minmax(0, 1.15fr)
         minmax(0, 0.85fr);
 
-    align-items: start;
+    align-items: center;
 
     gap: clamp(35px, 5vw, 90px);
 
-    /* Small gap below navigation */
     padding-top: 45px;
-
-    /* Small gap below introduction */
     padding-bottom: 55px;
 
-    /* No artificial vertical shifting */
     transform: none;
 }
-
 
 
 /* ==========================================
@@ -183,66 +204,94 @@ button {
 
 .hero-content {
     position: relative;
+
     min-width: 0;
     max-width: 660px;
 }
 
+
+/* NAME */
+
 .hero-content h1 {
     font-family: 'Outfit', sans-serif;
+
     font-size: clamp(43px, 4.5vw, 72px);
     font-weight: 700;
+
     line-height: 1.13;
     letter-spacing: -1.8px;
+
     color: #ffffff;
+
     margin-bottom: 28px;
+
     overflow-wrap: anywhere;
 }
 
-/* TURQUOISE LINE */
+
+/* ==========================================
+   TURQUOISE DIVIDER
+   ========================================== */
 
 .hero-divider {
     width: 90px;
     height: 5px;
+
     background: var(--teal);
+
     border-radius: 5px;
     margin-bottom: 26px;
 }
 
-/* BIOGRAPHY */
 
+/* ==========================================
+   BIOGRAPHY
+   ========================================== */
 
 .hero-description {
     max-width: 660px;
+
     font-size: 15px;
     line-height: 1.9;
+
     color: var(--light-text);
 
-    /* Justify paragraph */
     text-align: justify;
     text-justify: inter-word;
 }
 
 
-/* BUTTONS */
+/* ==========================================
+   BUTTONS
+   ========================================== */
 
 .hero-buttons {
     display: flex;
     flex-wrap: wrap;
+
     gap: 18px;
     margin-top: 35px;
 }
 
 .btn {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
+
     padding: 14px 25px;
     min-height: 50px;
+
     border-radius: 5px;
+
     font-size: 13px;
     font-weight: 700;
+
     white-space: nowrap;
 }
+
+
+/* WHITE BUTTON */
 
 .btn-white {
     background: #ffffff;
@@ -253,6 +302,9 @@ button {
     background: #e9f5fc;
 }
 
+
+/* TEAL BUTTON */
+
 .btn-teal {
     background: var(--teal);
     color: #032e50;
@@ -262,34 +314,73 @@ button {
     background: #35d9d9;
 }
 
+
+/* ==========================================
+   TOP-RIGHT GET IN TOUCH BUTTON
+   ========================================== */
+
+.hero-top-contact {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    height: 1.13em;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    z-index: 2;
+}
+
+
+/* SMALLER BUTTON */
+
+.hero-top-contact .btn {
+    min-height: 38px;
+
+    padding: 9px 17px;
+
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+
 /* ==========================================
    RIGHT: PORTRAIT
    ========================================== */
 
 .hero-visual {
     width: 100%;
+
     display: flex;
+
     align-items: center;
     justify-content: center;
 }
 
-/* SMALLER PORTRAIT FRAME */
+
+/* PORTRAIT FRAME */
 
 .portrait-frame {
     width: min(100%, 350px);
 
-    /* Reduce image height */
     height: 420px;
     aspect-ratio: auto;
 
     overflow: hidden;
+
     border-radius: 6px;
+
     background: #dceefa;
 
-    box-shadow: 0 18px 45px rgba(0,0,0,0.18);
+    box-shadow:
+        0 18px 45px rgba(0,0,0,0.18);
 }
 
-/* IMAGE */
+
+/* PORTRAIT IMAGE */
 
 .portrait-frame img {
     width: 100%;
@@ -299,180 +390,35 @@ button {
     object-position: center 30%;
 }
 
-/* ==========================================
-   TABLET
-   ========================================== */
-
-@media (max-width: 950px) {
-
-    .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
-        padding-top: 65px;
-        padding-bottom: 70px;
-    }
-
-    .hero-content {
-        max-width: 750px;
-    }
-
-    .hero-visual {
-        justify-content: center;
-    }
-
-    .portrait-frame {
-        width: min(100%, 380px);
-    }
-
-    .nav-links {
-        gap: 18px;
-    }
-}
-
-/* ==========================================
-   MOBILE
-   ========================================== */
-
-@media (max-width: 650px) {
-
-    .container {
-        width: 90%;
-    }
-
-    .navbar {
-        min-height: 72px;
-    }
-
-    .logo {
-        font-size: 30px;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 72px;
-        left: 0;
-        right: 0;
-
-        background: #053456;
-        padding: 20px 5% 30px;
-
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-
-        z-index: 100;
-    }
-
-    .nav-links.open {
-        display: flex;
-    }
-
-    .nav-links a {
-        font-size: 14px;
-    }
-
-    .hero {
-        min-height: calc(100svh - 72px);
-    }
-
-    .hero-grid {
-        padding-top: 55px;
-        padding-bottom: 60px;
-        gap: 40px;
-    }
-
-    .hero-content h1 {
-        font-size: clamp(36px, 9vw, 52px);
-        letter-spacing: -1px;
-    }
-
-    .hero-description {
-        font-size: 14px;
-        line-height: 1.85;
-    }
-
-    .hero-buttons {
-        gap: 12px;
-    }
-
-    .btn {
-        padding: 13px 19px;
-        font-size: 12px;
-    }
-
-    .portrait-frame {
-        width: min(100%, 320px);
-    }
-}
-
-@media (max-width: 380px) {
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .btn {
-        width: 100%;
-    }
-}
-
-
-/* ==========================================
-   RESPONSIVE HOMEPAGE SPACING
-   ========================================== */
-
-@media (max-width: 950px) {
-
-    .hero-grid {
-        padding-top: 45px;
-        padding-bottom: 50px;
-        transform: none;
-    }
-
-}
-
-@media (max-width: 650px) {
-
-    .hero-grid {
-        padding-top: 35px;
-        padding-bottom: 40px;
-    }
-
-}
-
 
 /* ==========================================
    RESEARCH AREAS STRIP
    ========================================== */
 
-/* Dark background matching top navigation */
-
 .expertise-strip {
     width: 100%;
+
     background: #053456;
 
     padding: 35px 0;
 }
 
-/* Four equally sized cards */
+
+/* FOUR CARDS */
 
 .expertise-grid {
     display: grid;
 
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
 
     gap: 25px;
 
     align-items: stretch;
 }
 
-/* Turquoise cards */
+
+/* CARD DESIGN */
 
 .expertise-card {
     display: flex;
@@ -498,12 +444,44 @@ button {
     border-radius: 5px;
 }
 
-/* Tablet */
+
+/* ==========================================
+   TABLET
+   ========================================== */
 
 @media (max-width: 950px) {
 
+    .hero-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        padding-top: 45px;
+        padding-bottom: 50px;
+
+        transform: none;
+    }
+
+    .hero-content {
+        max-width: 750px;
+    }
+
+    .hero-visual {
+        justify-content: center;
+    }
+
+    .portrait-frame {
+        width: min(100%, 380px);
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
     .expertise-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
         gap: 18px;
     }
 
@@ -511,57 +489,158 @@ button {
         min-height: 85px;
         font-size: 15px;
     }
+
 }
 
-/* Mobile */
+
+/* ==========================================
+   MOBILE
+   ========================================== */
 
 @media (max-width: 650px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .navbar {
+        min-height: 72px;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+
+    /* MOBILE NAVIGATION */
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+
+        top: 72px;
+        left: 0;
+        right: 0;
+
+        background: #053456;
+
+        padding: 20px 5% 30px;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 15px;
+
+        z-index: 100;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+
+    /* MOBILE HERO */
+
+    .hero {
+        min-height: calc(100svh - 72px);
+    }
+
+    .hero-grid {
+        padding-top: 35px;
+        padding-bottom: 40px;
+
+        gap: 40px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(36px, 9vw, 52px);
+        letter-spacing: -1px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+        line-height: 1.85;
+    }
+
+
+    /* MOBILE CONTACT BUTTON */
+
+    .hero-top-contact {
+        position: static;
+
+        display: flex;
+        justify-content: flex-end;
+
+        height: auto;
+        margin-bottom: 25px;
+    }
+
+
+    /* MOBILE BUTTONS */
+
+    .hero-buttons {
+        gap: 12px;
+    }
+
+    .btn {
+        padding: 13px 19px;
+        font-size: 12px;
+    }
+
+
+    /* MOBILE PORTRAIT */
+
+    .portrait-frame {
+        width: min(100%, 320px);
+    }
+
+
+    /* MOBILE RESEARCH CARDS */
 
     .expertise-strip {
         padding: 28px 0;
     }
 
     .expertise-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
         gap: 12px;
     }
 
     .expertise-card {
         min-height: 80px;
+
         padding: 15px 10px;
+
         font-size: 13px;
     }
+
 }
+
 
 /* ==========================================
-   RESPONSIVE ALIGNMENT
+   SMALL MOBILE SCREENS
    ========================================== */
 
-@media (max-width: 950px) {
+@media (max-width: 380px) {
 
-    .hero-heading h1 {
-        font-size: clamp(36px, 5vw, 60px);
-    }
-
-    .hero-top-contact {
-        height: calc(clamp(36px, 5vw, 60px) * 1.13);
-    }
-}
-
-@media (max-width: 650px) {
-
-    .hero-heading {
+    .hero-buttons {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 18px;
+        align-items: stretch;
     }
 
-    .hero-heading h1 {
-        font-size: clamp(36px, 9vw, 52px);
+    .btn {
+        width: 100%;
     }
 
-    .hero-top-contact {
-        height: auto;
-        align-self: flex-start;
-    }
 }
