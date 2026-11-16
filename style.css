@@ -161,7 +161,7 @@ button {
         minmax(0, 1.15fr)
         minmax(0, 0.85fr);
 
-    align-items: center;
+    align-items: start;
 
     gap: clamp(35px, 5vw, 90px);
 
@@ -276,17 +276,17 @@ button {
 /* SMALLER PORTRAIT FRAME */
 
 .portrait-frame {
-    width: min(100%, 390px);
-    aspect-ratio: 3 / 4;
+    width: min(100%, 350px);
+
+    /* Reduce image height */
+    height: 420px;
+    aspect-ratio: auto;
 
     overflow: hidden;
-
     border-radius: 6px;
-
     background: #dceefa;
 
-    box-shadow:
-        0 18px 45px rgba(0,0,0,0.18);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.18);
 }
 
 /* IMAGE */
