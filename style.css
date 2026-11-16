@@ -448,7 +448,7 @@ button {
 
 
 /* ==========================================
-   RESEARCH CONTRIBUTIONS STRIP
+   RESEARCH AREAS STRIP
    ========================================== */
 
 /* Dark background matching top navigation */
@@ -460,26 +460,7 @@ button {
     padding: 35px 0;
 }
 
-/* ==========================================
-   RESEARCH CONTRIBUTIONS HEADING
-   ========================================== */
-
-.expertise-title {
-    font-family: 'Outfit', sans-serif;
-
-    font-size: 28px;
-    font-weight: 700;
-
-    color: #ffffff;
-
-    text-align: left;
-
-    margin-bottom: 25px;
-}
-
-/* ==========================================
-   FOUR RESEARCH CONTRIBUTION CARDS
-   ========================================== */
+/* Four equally sized cards */
 
 .expertise-grid {
     display: grid;
@@ -491,7 +472,7 @@ button {
     align-items: stretch;
 }
 
-/* Blue cards */
+/* Turquoise cards */
 
 .expertise-card {
     display: flex;
@@ -517,16 +498,9 @@ button {
     border-radius: 5px;
 }
 
-/* ==========================================
-   TABLET
-   ========================================== */
+/* Tablet */
 
 @media (max-width: 950px) {
-
-    .expertise-title {
-        font-size: 26px;
-        margin-bottom: 22px;
-    }
 
     .expertise-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -539,19 +513,12 @@ button {
     }
 }
 
-/* ==========================================
-   MOBILE
-   ========================================== */
+/* Mobile */
 
 @media (max-width: 650px) {
 
     .expertise-strip {
         padding: 28px 0;
-    }
-
-    .expertise-title {
-        font-size: 23px;
-        margin-bottom: 20px;
     }
 
     .expertise-grid {
@@ -565,7 +532,6 @@ button {
         font-size: 13px;
     }
 }
-
 
 /* ==========================================
    RESPONSIVE ALIGNMENT
