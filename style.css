@@ -446,8 +446,9 @@ button {
 
 }
 
+
 /* ==========================================
-   RESEARCH AREAS STRIP
+   RESEARCH CONTRIBUTIONS STRIP
    ========================================== */
 
 /* Dark background matching top navigation */
@@ -459,7 +460,26 @@ button {
     padding: 35px 0;
 }
 
-/* Four equally sized cards */
+/* ==========================================
+   RESEARCH CONTRIBUTIONS HEADING
+   ========================================== */
+
+.expertise-title {
+    font-family: 'Outfit', sans-serif;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    color: #ffffff;
+
+    text-align: left;
+
+    margin-bottom: 25px;
+}
+
+/* ==========================================
+   FOUR RESEARCH CONTRIBUTION CARDS
+   ========================================== */
 
 .expertise-grid {
     display: grid;
@@ -471,7 +491,7 @@ button {
     align-items: stretch;
 }
 
-/* Turquoise cards */
+/* Blue cards */
 
 .expertise-card {
     display: flex;
@@ -497,9 +517,16 @@ button {
     border-radius: 5px;
 }
 
-/* Tablet */
+/* ==========================================
+   TABLET
+   ========================================== */
 
 @media (max-width: 950px) {
+
+    .expertise-title {
+        font-size: 26px;
+        margin-bottom: 22px;
+    }
 
     .expertise-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -512,12 +539,19 @@ button {
     }
 }
 
-/* Mobile */
+/* ==========================================
+   MOBILE
+   ========================================== */
 
 @media (max-width: 650px) {
 
     .expertise-strip {
         padding: 28px 0;
+    }
+
+    .expertise-title {
+        font-size: 23px;
+        margin-bottom: 20px;
     }
 
     .expertise-grid {
@@ -532,62 +566,6 @@ button {
     }
 }
 
-
-/* ==========================================
-   NAME AND GET IN TOUCH BUTTON ALIGNMENT
-   ========================================== */
-
-.hero-content {
-    position: relative;
-    min-width: 0;
-    max-width: 660px;
-}
-
-/* Name and button in the same row */
-
-.hero-heading {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 20px;
-    width: 100%;
-    margin-bottom: 28px;
-}
-
-/* Preserve the existing heading appearance */
-
-.hero-heading h1 {
-    font-family: 'Outfit', sans-serif;
-    font-size: clamp(43px, 4.5vw, 72px);
-    font-weight: 700;
-    line-height: 1.13;
-    letter-spacing: -1.8px;
-    color: #ffffff;
-    margin: 0;
-    overflow-wrap: normal;
-}
-
-/* Align button with bottom of first name line */
-
-.hero-top-contact {
-    position: relative;
-    top: -12px;  /* Raise the button by 12px */
-
-    flex-shrink: 0;
-    display: flex;
-    align-items: flex-end;
-
-    height: calc(clamp(43px, 4.5vw, 72px) * 1.13);
-}
-
-/* Smaller contact button */
-
-.hero-top-contact .btn {
-    min-height: 38px;
-    padding: 9px 17px;
-    font-size: 12px;
-    border-radius: 5px;
-}
 
 /* ==========================================
    RESPONSIVE ALIGNMENT
