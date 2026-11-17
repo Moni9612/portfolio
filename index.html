@@ -159,6 +159,7 @@
 
        
 
+
 <!-- ==========================================
      RESEARCH CONTRIBUTIONS TREE
      ========================================== -->
@@ -176,6 +177,7 @@
            aria-labelledby="tree-title tree-desc">
 
         <title id="tree-title">Research Contributions</title>
+
         <desc id="tree-desc">
           Research Contributions connected to Robotic Sorting,
           Grasp Benchmarking, Soft Robotic Gripper Design,
@@ -184,72 +186,59 @@
 
         <defs>
 
-          
-<!-- ROOT GRADIENT -->
-<linearGradient id="rootGrad" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0%" stop-color="#12C9C6"/>
-    <stop offset="100%" stop-color="#299EAC"/>
-</linearGradient>
+          <!-- ROOT GRADIENT -->
+          <linearGradient id="rootGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#12C9C6"/>
+            <stop offset="100%" stop-color="#299EAC"/>
+          </linearGradient>
 
-<!-- LEFT GRADIENT -->
-<linearGradient id="leftGrad" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0%" stop-color="#0CC8C1"/>
-    <stop offset="100%" stop-color="#238DA4"/>
-</linearGradient>
+          <!-- LEFT GRADIENT -->
+          <linearGradient id="leftGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#0CC8C1"/>
+            <stop offset="100%" stop-color="#238DA4"/>
+          </linearGradient>
 
-<!-- CENTRE GRADIENT -->
-<linearGradient id="centreGrad" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0%" stop-color="#79B2C1"/>
-    <stop offset="100%" stop-color="#43899F"/>
-</linearGradient>
+          <!-- CENTRE GRADIENT -->
+          <linearGradient id="centreGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#79B2C1"/>
+            <stop offset="100%" stop-color="#43899F"/>
+          </linearGradient>
 
-<!-- GREEN GRADIENT -->
-<linearGradient id="greenGrad" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0%" stop-color="#10C1C0"/>
-    <stop offset="100%" stop-color="#3A8FA5"/>
-</linearGradient>
+          <!-- GREEN GRADIENT -->
+          <linearGradient id="greenGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#10C1C0"/>
+            <stop offset="100%" stop-color="#3A8FA5"/>
+          </linearGradient>
 
-<!-- RIGHT GRADIENT -->
-<linearGradient id="rightGrad" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0%" stop-color="#6CA8BB"/>
-    <stop offset="100%" stop-color="#397D99"/>
-</linearGradient>
+          <!-- RIGHT GRADIENT -->
+          <linearGradient id="rightGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#6CA8BB"/>
+            <stop offset="100%" stop-color="#397D99"/>
+          </linearGradient>
 
-<!-- BRANCH GRADIENT -->
-<linearGradient id="branchGrad" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0%" stop-color="#13BDBB"/>
-    <stop offset="50%" stop-color="#35B0B7"/>
-    <stop offset="100%" stop-color="#659DB3"/>
-</linearGradient>
-
+          <!-- BRANCH GRADIENT -->
+          <linearGradient id="branchGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#13BDBB"/>
+            <stop offset="50%" stop-color="#35B0B7"/>
+            <stop offset="100%" stop-color="#659DB3"/>
+          </linearGradient>
 
           <!-- SOFT SHADOW -->
-          
-<filter id="treeShadow"
-        x="-30%" y="-35%"
-        width="160%" height="180%">
+          <filter id="treeShadow"
+                  x="-30%" y="-35%"
+                  width="160%" height="180%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="9"/>
+            <feOffset dy="7"/>
+            <feComponentTransfer>
+              <feFuncA type="linear" slope="0.16"/>
+            </feComponentTransfer>
+            <feMerge>
+              <feMergeNode/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
 
-    <feGaussianBlur
-        in="SourceAlpha"
-        stdDeviation="9"/>
-
-    <feOffset dy="7"/>
-
-    <feComponentTransfer>
-        <feFuncA
-            type="linear"
-            slope="0.16"/>
-    </feComponentTransfer>
-
-    <feMerge>
-        <feMergeNode/>
-        <feMergeNode in="SourceGraphic"/>
-    </feMerge>
-
-</filter>
-
-
-          <!-- SUBTLE GLOW -->
+          <!-- BACKGROUND GLOW -->
           <filter id="treeGlow"
                   x="-60%" y="-60%"
                   width="220%" height="220%">
@@ -257,7 +246,6 @@
           </filter>
 
         </defs>
-
 
         <!-- ==================================
              BACKGROUND GLOW
@@ -270,56 +258,52 @@
           <circle cx="1100" cy="600" r="130" fill="#00d6bc"/>
         </g>
 
+        <!-- ==================================
+             TREE CONNECTIONS
+             ================================== -->
 
-        
-<!-- ==================================
-     TREE CONNECTIONS
-     ================================== -->
+        <g fill="none"
+           stroke="url(#branchGrad)"
+           stroke-width="34"
+           stroke-linecap="round"
+           stroke-linejoin="round">
 
-<g fill="none"
-   stroke="url(#branchGrad)"
-   stroke-width="34"
-   stroke-linecap="round"
-   stroke-linejoin="round">
+          <!-- LEFT OUTER BRANCH -->
+          <path d="
+            M 670 165
+            C 660 215, 620 250, 550 250
+            H 360
+            C 280 250, 250 280, 250 350
+          "/>
 
-  <!-- LEFT OUTER: ROBOTIC SORTING -->
-  <path d="
-  M 670 165
-  C 660 215, 620 250, 550 250
-  H 360
-  C 280 250, 250 280, 250 350
-"/>
+          <!-- LEFT INNER BRANCH -->
+          <path d="
+            M 655 190
+            L 655 450
+          "/>
 
-  <!-- LEFT INNER: GRASP BENCHMARKING -->
-  <path d="
-  M 655 190
-  L 655 300
-  C 655 330, 565 330, 565 350
-"/>
+          <!-- BENCHMARKING LOOP -->
+          <path d="
+            M 565 475
+            C 565 380, 735 380, 735 475
+          "/>
 
-  <!-- BENCHMARKING CURVED LOOP -->
-  <path d="
-    M 485 425
-    C 485 350, 645 350, 645 425
-  "/>
+          <!-- RIGHT OUTER BRANCH -->
+          <path d="
+            M 765 165
+            C 780 215, 825 250, 885 250
+            H 1050
+            C 1130 250, 1160 285, 1160 350
+          "/>
 
-  <!-- RIGHT OUTER: MULTIMODAL GRASPING -->
-  <path d="
-  M 765 165
-  C 780 215, 825 250, 885 250
-  H 1050
-  C 1130 250, 1160 285, 1160 350
-"/>
+          <!-- RIGHT INNER BRANCH -->
+          <path d="
+            M 780 190
+            L 780 385
+            C 780 420, 850 420, 850 475
+          "/>
 
-  <!-- RIGHT INNER: SOFT ROBOTIC GRIPPER DESIGN -->
-  <path d="
-  M 780 190
-  L 780 300
-  C 780 330, 850 330, 850 350
-"/>
-
-</g>
-
+        </g>
 
         <!-- ==================================
              ROOT BOX
@@ -349,175 +333,187 @@
 
         </g>
 
-        <text x="700" y="82"
+        <text x="700" y="70"
               text-anchor="middle"
               class="tree-root-text">
           <tspan x="700">Research</tspan>
-          <tspan x="700" dy="46">Contributions</tspan>
+          <tspan x="700" dy="49">Contributions</tspan>
         </text>
 
-
         <!-- ==================================
-             LOWER LEFT:
              GRASP BENCHMARKING
              ================================== -->
 
-        <g filter="url(#treeShadow)" transform="translate(0,-145)">
+        <g transform="translate(550 565) scale(0.88) translate(-550 -565)">
 
-          <path fill="url(#centreGrad)"
-                d="
-                  M 420 470
-                  H 680
-                  Q 730 470 730 520
-                  V 610
-                  Q 730 660 680 660
-                  H 665
-                  Q 655 660 655 675
-                  V 690
-                  Q 655 730 610 730
-                  H 510
-                  Q 465 730 465 690
-                  V 675
-                  Q 465 660 450 660
-                  H 420
-                  Q 370 660 370 610
-                  V 520
-                  Q 370 470 420 470
-                  Z
-                "/>
+          <g filter="url(#treeShadow)">
+
+            <path fill="url(#centreGrad)"
+                  d="
+                    M 420 470
+                    H 680
+                    Q 730 470 730 520
+                    V 610
+                    Q 730 660 680 660
+                    H 665
+                    Q 655 660 655 675
+                    V 690
+                    Q 655 730 610 730
+                    H 510
+                    Q 465 730 465 690
+                    V 675
+                    Q 465 660 450 660
+                    H 420
+                    Q 370 660 370 610
+                    V 520
+                    Q 370 470 420 470
+                    Z
+                  "/>
+
+          </g>
 
         </g>
 
-        <text x="550" y="403"
-      text-anchor="middle"
-      class="tree-card-text tree-card-light">
+        <text x="550" y="548"
+              text-anchor="middle"
+              class="tree-card-text tree-card-light">
           <tspan x="550">Grasp</tspan>
           <tspan x="550" dy="39">Benchmarking</tspan>
         </text>
 
-
         <!-- ==================================
-             LOWER RIGHT:
              SOFT ROBOTIC GRIPPER DESIGN
              ================================== -->
 
-        <g filter="url(#treeShadow)" transform="translate(0,-145)">
+        <g transform="translate(910 565) scale(0.88) translate(-910 -565)">
 
-          <path fill="url(#greenGrad)"
-                d="
-                  M 780 470
-                  H 1040
-                  Q 1090 470 1090 520
-                  V 605
-                  Q 1090 650 1045 650
-                  H 1025
-                  Q 1010 650 1010 670
-                  V 690
-                  Q 1010 720 965 720
-                  H 865
-                  Q 820 720 820 690
-                  V 670
-                  Q 820 650 805 650
-                  H 780
-                  Q 730 650 730 605
-                  V 520
-                  Q 730 470 780 470
-                  Z
-                "/>
+          <g filter="url(#treeShadow)">
+
+            <path fill="url(#greenGrad)"
+                  d="
+                    M 780 470
+                    H 1040
+                    Q 1090 470 1090 520
+                    V 605
+                    Q 1090 650 1045 650
+                    H 1025
+                    Q 1010 650 1010 670
+                    V 690
+                    Q 1010 720 965 720
+                    H 865
+                    Q 820 720 820 690
+                    V 670
+                    Q 820 650 805 650
+                    H 780
+                    Q 730 650 730 605
+                    V 520
+                    Q 730 470 780 470
+                    Z
+                  "/>
+
+          </g>
 
         </g>
 
-        <text x="910" y="405"
-      text-anchor="middle"
-      class="tree-card-text">
+        <text x="910" y="550"
+              text-anchor="middle"
+              class="tree-card-text">
           <tspan x="910">Soft Robotic</tspan>
           <tspan x="910" dy="39">Gripper Design</tspan>
         </text>
 
-
         <!-- ==================================
-             UPPER LEFT:
              ROBOTIC SORTING
              ================================== -->
 
-        <g filter="url(#treeShadow)" transform="translate(-70, 0)">
+        <g transform="translate(-70 0)">
 
-          <path fill="url(#leftGrad)"
-                d="
-                  M 210 325
-                  H 410
-                  Q 465 325 465 380
-                  V 420
-                  Q 465 475 410 475
-                  H 400
-                  Q 385 475 385 495
-                  V 510
-                  Q 385 555 335 555
-                  H 250
-                  Q 200 555 200 510
-                  V 495
-                  Q 200 475 185 475
-                  H 180
-                  Q 125 475 125 420
-                  V 405
-                  Q 125 325 210 325
-                  Z
-                "/>
+          <g transform="translate(295 410) scale(0.88) translate(-295 -410)">
+
+            <g filter="url(#treeShadow)">
+
+              <path fill="url(#leftGrad)"
+                    d="
+                      M 210 325
+                      H 410
+                      Q 465 325 465 380
+                      V 420
+                      Q 465 475 410 475
+                      H 400
+                      Q 385 475 385 495
+                      V 510
+                      Q 385 555 335 555
+                      H 250
+                      Q 200 555 200 510
+                      V 495
+                      Q 200 475 185 475
+                      H 180
+                      Q 125 475 125 420
+                      V 405
+                      Q 125 325 210 325
+                      Z
+                    "/>
+
+            </g>
+
+          </g>
 
         </g>
 
-        
-<text x="225" y="390"
-      text-anchor="middle"
-      class="tree-card-text">
-    <tspan x="225">Robotic</tspan>
-    <tspan x="225" dy="39">Sorting</tspan>
-</text>
-
-
+        <text x="225" y="390"
+              text-anchor="middle"
+              class="tree-card-text">
+          <tspan x="225">Robotic</tspan>
+          <tspan x="225" dy="39">Sorting</tspan>
+        </text>
 
         <!-- ==================================
-             UPPER RIGHT:
              MULTIMODAL GRASPING
              ================================== -->
 
-        <g filter="url(#treeShadow)" transform="translate(70, 0)">
+        <g transform="translate(70 0)">
 
-          <path fill="url(#rightGrad)"
-                d="
-                  M 1010 325
-                  H 1160
-                  Q 1175 325 1185 310
-                  Q 1195 295 1225 295
-                  H 1280
-                  Q 1340 295 1340 355
-                  V 405
-                  Q 1340 455 1290 455
-                  H 1265
-                  Q 1245 455 1245 475
-                  V 500
-                  Q 1245 540 1195 540
-                  H 1100
-                  Q 1050 540 1050 500
-                  V 475
-                  Q 1050 455 1030 455
-                  H 1010
-                  Q 955 455 955 400
-                  V 380
-                  Q 955 325 1010 325
-                  Z
-                "/>
+          <g transform="translate(1150 400) scale(0.88) translate(-1150 -400)">
+
+            <g filter="url(#treeShadow)">
+
+              <path fill="url(#rightGrad)"
+                    d="
+                      M 1010 325
+                      H 1160
+                      Q 1175 325 1185 310
+                      Q 1195 295 1225 295
+                      H 1280
+                      Q 1340 295 1340 355
+                      V 405
+                      Q 1340 455 1290 455
+                      H 1265
+                      Q 1245 455 1245 475
+                      V 500
+                      Q 1245 540 1195 540
+                      H 1100
+                      Q 1050 540 1050 500
+                      V 475
+                      Q 1050 455 1030 455
+                      H 1010
+                      Q 955 455 955 400
+                      V 380
+                      Q 955 325 1010 325
+                      Z
+                    "/>
+
+            </g>
+
+          </g>
 
         </g>
 
-        
-<text x="1220" y="370"
-      text-anchor="middle"
-      class="tree-card-text">
-    <tspan x="1220">Multimodal</tspan>
-    <tspan x="1220" dy="39">Grasping</tspan>
-</text>
-
+        <text x="1220" y="370"
+              text-anchor="middle"
+              class="tree-card-text">
+          <tspan x="1220">Multimodal</tspan>
+          <tspan x="1220" dy="39">Grasping</tspan>
+        </text>
 
       </svg>
 
