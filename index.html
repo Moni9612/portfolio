@@ -652,5 +652,98 @@
 
     </script>
 
+<script>
+const researchData = {
+  sorting: {
+    title: "Robotic Sorting",
+    description: `The first stage of the project focuses on evaluating the feasibility and limitations of conventional robotic grasping systems for automated sorting of complex, highly contaminated food waste. A complete robotic grasping pipeline was developed by integrating deep learning-based 6D grasp pose detection, collision-free motion planning, and three distinct gripper modalities: rigid parallel, soft adaptive Fin-Ray, and suction grippers. Through approximately 1,500 real-world grasping trials across varying levels of clutter and contamination, this study systematically evaluated grasping performance and identified key failure modes in handling eight common inorganic contaminants found in food waste.`,
+    url: ""
+  },
+
+  benchmarking: {
+    title: "Grasp Benchmarking",
+    description: `The second contribution of the research project involved developing GRAB, a comprehensive real-world benchmarking framework to systematically evaluate robotic grasping performance in cluttered food waste sorting environments, with broader applicability to deformable object sorting applications. The framework compares three grasping modalities: rigid, soft adaptive, and suction, across four randomized clutter levels using grasp success, stability, and efficiency metrics. By integrating object deformability, grasp pose quality, clutter conditions, and failure mode analysis, GRAB identifies the key factors influencing grasping performance and provides insights for developing robust, adaptive, and multimodal robotic grasping systems.`,
+    url: ""
+  },
+
+  design: {
+    title: "Soft Robotic Gripper Design",
+    description: `The third contribution of the research project involved developing a novel Hybrid Compliance Activation (HCA) soft robotic gripper that couples active and passive compliance through a single-motor mechanism to enhance grasping performance for deformable objects in cluttered food waste sorting environments. A neural-network-assisted multi-objective evolutionary optimization framework was developed to optimize the soft adaptive Fin-Ray finger geometry under varying deformable object contact conditions. The proposed gripper improves finger conformance while maintaining sufficient contact force and reducing undesirable deformation. Through 420 real-world 6D grasping trials across randomized cluttered scenes, the HCA gripper achieved a 20.8% relative improvement in grasp success rate compared with conventional passive compliance, demonstrating its effectiveness in handling deformable objects under complex contact conditions.`,
+    url: ""
+  },
+
+  multimodal: {
+    title: "Multimodal Grasping",
+    description: `The fourth contribution of the research project, which is ongoing, focuses on developing an intelligent multimodal robotic gripper that integrates soft adaptive parallel grasping and suction grasping within a single robotic system for automated sorting of complex, highly contaminated food waste. A reinforcement learning-based switching algorithm is being developed to enable intelligent selection and switching between grasping modalities based on object characteristics. This research aims to exploit the complementary capabilities of different grasping modalities to improve grasping adaptability, reliability, and overall sorting performance in complex, cluttered environments.`,
+    url: ""
+  }
+};
+
+const researchTree = document.querySelector(".research-tree");
+const researchCards = document.querySelectorAll(".research-hit-area");
+const descriptionPanel = document.getElementById("research-description-panel");
+const descriptionTitle = document.getElementById("research-description-title");
+const descriptionText = document.getElementById("research-description-text");
+const projectLink = document.getElementById("research-project-link");
+
+let pinnedCard = null;
+
+function showResearch(key) {
+  const data = researchData[key];
+  if (!data) return;
+
+  descriptionTitle.textContent = data.title;
+  descriptionText.textContent = data.description;
+
+  if (data.url) {
+    projectLink.href = data.url;
+    projectLink.hidden = false;
+  } else {
+    projectLink.hidden = true;
+    projectLink.removeAttribute("href");
+  }
+
+  descriptionPanel.hidden = false;
+}
+
+function hideResearch() {
+  if (pinnedCard !== null) return;
+  descriptionPanel.hidden = true;
+}
+
+researchCards.forEach(card => {
+  const key = card.dataset.research;
+
+  // Desktop hover
+  card.addEventListener("mouseenter", () => {
+    showResearch(key);
+  });
+
+  // Keyboard and touch interaction
+  card.addEventListener("click", () => {
+    if (pinnedCard === key) {
+      pinnedCard = null;
+      descriptionPanel.hidden = true;
+    } else {
+      pinnedCard = key;
+      showResearch(key);
+    }
+  });
+
+  card.addEventListener("keydown", event => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      card.dispatchEvent(new MouseEvent("click"));
+    }
+  });
+
+  card.addEventListener("focus", () => {
+    showResearch(key);
+  });
+});
+
+researchTree.addEventListener("mouseleave", hideResearch);
+</script>
+
 </body>
 </html>
