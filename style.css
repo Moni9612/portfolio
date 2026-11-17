@@ -391,7 +391,6 @@ button {
     object-position: center 30%;
 }
 
-
 /* ==========================================
    RESEARCH CONTRIBUTIONS TREE
    ========================================== */
@@ -401,29 +400,30 @@ button {
 
     background:
         radial-gradient(
-            ellipse at 50% 55%,
-            rgba(33, 190, 190, 0.13),
-            transparent 65%
-        ),
-        #F4F5F5;
+            ellipse at 50% 45%,
+            #075569 0%,
+            #04445E 55%,
+            #053456 100%
+        );
 
-    padding: 45px 0 55px;
+    padding: 20px 0 35px;
 
     overflow: hidden;
 }
+
 
 /* TREE CONTAINER */
 
 .research-tree {
     width: 100%;
-    max-width: 1100px;
+    max-width: 1200px;
 
     margin: 0 auto;
-
     position: relative;
 }
 
-/* SVG TREE */
+
+/* SVG */
 
 .research-tree-svg {
     display: block;
@@ -434,24 +434,11 @@ button {
     overflow: visible;
 }
 
-/* ROOT TITLE - LARGER FONT */
+
+/* ROOT TEXT */
 
 .tree-root-text {
     font-family: 'Outfit', sans-serif;
-
-    font-size: 34px;
-    font-weight: 700;
-
-    fill: #063456;
-
-    dominant-baseline: middle;
-}
-
-/* CONTRIBUTION LABELS - LARGER FONT */
-
-.tree-card-text {
-    font-family: 'DM Sans', sans-serif;
-
     font-size: 25px;
     font-weight: 700;
 
@@ -460,11 +447,26 @@ button {
     dominant-baseline: middle;
 }
 
-/* WHITE TEXT FOR BENCHMARKING */
+
+/* RESEARCH BOX TEXT */
+
+.tree-card-text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+
+    fill: #063456;
+
+    dominant-baseline: middle;
+}
+
+
+/* BENCHMARKING WHITE TEXT */
 
 .tree-card-light {
     fill: #ffffff;
 }
+
 
 /* ==========================================
    TABLET
@@ -473,13 +475,15 @@ button {
 @media (max-width: 950px) {
 
     .expertise-strip {
-        padding: 35px 0 45px;
+        padding: 25px 0 35px;
     }
 
     .research-tree {
-        max-width: 850px;
+        max-width: 900px;
     }
+
 }
+
 
 /* ==========================================
    MOBILE
@@ -488,7 +492,7 @@ button {
 @media (max-width: 650px) {
 
     .expertise-strip {
-        padding: 30px 0 40px;
+        padding: 20px 0 30px;
     }
 
     .research-tree {
@@ -499,8 +503,8 @@ button {
         width: 100%;
         height: auto;
     }
-}
 
+}
 
 
 /* ==========================================
