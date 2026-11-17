@@ -439,27 +439,25 @@ button {
 
 .tree-root-text {
     font-family: 'Outfit', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
 
-    font-size: 42px;
-    font-weight: 800;
+    fill: #063456;
 
-    fill: #032e50;
-
-    letter-spacing: -1px;
+    dominant-baseline: middle;
 }
 
 
 /* RESEARCH BOX TEXT */
 
 .tree-card-text {
-    font-family: 'Outfit', sans-serif;
-
-    font-size: 29px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 20px;
     font-weight: 700;
 
-    fill: #032e50;
+    fill: #063456;
 
-    letter-spacing: -0.5px;
+    dominant-baseline: middle;
 }
 
 
