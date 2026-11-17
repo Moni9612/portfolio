@@ -259,52 +259,54 @@
         </g>
 
 
-        <!-- ==================================
-             TREE CONNECTIONS
-             ================================== -->
+        
+<!-- ==================================
+     TREE CONNECTIONS
+     ================================== -->
 
-        <g fill="none"
-           stroke="url(#branchGrad)"
-           stroke-width="34"
-           stroke-linecap="round"
-           stroke-linejoin="round">
+<g fill="none"
+   stroke="url(#branchGrad)"
+   stroke-width="34"
+   stroke-linecap="round"
+   stroke-linejoin="round">
 
-          <!-- LEFT OUTER BRANCH -->
-          <path d="
-            M 670 165
-            C 660 215, 620 250, 550 250
-            H 430
-            C 350 250, 320 280, 320 350
-          "/>
+  <!-- LEFT OUTER: ROBOTIC SORTING -->
+  <path d="
+    M 670 165
+    C 660 215, 620 250, 550 250
+    H 430
+    C 350 250, 320 280, 320 350
+  "/>
 
-          <!-- LEFT INNER BRANCH -->
-          <path d="
-            M 655 190
-            L 655 450
-          "/>
+  <!-- LEFT INNER: GRASP BENCHMARKING -->
+  <path d="
+  M 655 190
+  L 655 300
+  C 655 330, 565 330, 565 350
+"/>
 
-          <!-- BENCHMARKING LOOP -->
-          <path d="
-            M 565 475
-            C 565 380, 735 380, 735 475
-          "/>
+  <!-- BENCHMARKING CURVED LOOP -->
+  <path d="
+    M 485 425
+    C 485 350, 645 350, 645 425
+  "/>
 
-          <!-- RIGHT OUTER BRANCH -->
-          <path d="
-            M 765 165
-            C 780 215, 825 250, 885 250
-            H 980
-            C 1060 250, 1090 285, 1090 350
-          "/>
+  <!-- RIGHT OUTER: MULTIMODAL GRASPING -->
+  <path d="
+    M 765 165
+    C 780 215, 825 250, 885 250
+    H 980
+    C 1060 250, 1090 285, 1090 350
+  "/>
 
-          <!-- RIGHT INNER BRANCH -->
-          <path d="
-            M 780 190
-            L 780 385
-            C 780 420, 850 420, 850 475
-          "/>
+  <!-- RIGHT INNER: SOFT ROBOTIC GRIPPER DESIGN -->
+  <path d="
+  M 780 190
+  L 780 300
+  C 780 330, 850 330, 850 350
+"/>
 
-        </g>
+</g>
 
 
         <!-- ==================================
@@ -348,7 +350,7 @@
              GRASP BENCHMARKING
              ================================== -->
 
-        <g filter="url(#treeShadow)">
+        <g filter="url(#treeShadow)" transform="translate(0,-145)">
 
           <path fill="url(#centreGrad)"
                 d="
@@ -374,9 +376,9 @@
 
         </g>
 
-        <text x="550" y="548"
-              text-anchor="middle"
-              class="tree-card-text tree-card-light">
+        <text x="550" y="403"
+      text-anchor="middle"
+      class="tree-card-text tree-card-light">
           <tspan x="550">Grasp</tspan>
           <tspan x="550" dy="39">Benchmarking</tspan>
         </text>
@@ -387,7 +389,7 @@
              SOFT ROBOTIC GRIPPER DESIGN
              ================================== -->
 
-        <g filter="url(#treeShadow)">
+        <g filter="url(#treeShadow)" transform="translate(0,-145)">
 
           <path fill="url(#greenGrad)"
                 d="
@@ -413,9 +415,9 @@
 
         </g>
 
-        <text x="910" y="550"
-              text-anchor="middle"
-              class="tree-card-text">
+        <text x="910" y="405"
+      text-anchor="middle"
+      class="tree-card-text">
           <tspan x="910">Soft Robotic</tspan>
           <tspan x="910" dy="39">Gripper Design</tspan>
         </text>
