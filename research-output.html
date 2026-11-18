@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Research publications and outputs of Moniesha Thilakarathna.">
+<title>Research Output | Moniesha Thilakarathna</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=6">
+<style>
+.research-page{background:radial-gradient(ellipse at 80% 40%,rgba(0,125,165,.18),transparent 55%),#04445e;min-height:calc(100vh - 80px);padding:68px 0 90px;color:#fff}
+.research-page .page-heading{font:700 clamp(38px,5vw,64px)/1.12 'Outfit',sans-serif;letter-spacing:-1px;margin:0 0 22px}
+.research-page .heading-rule{width:90px;height:5px;border-radius:5px;background:#08c7c9;margin-bottom:24px}
+.research-page .intro{color:#e2eff7;max-width:800px;font-size:16px;line-height:1.85}
+.profile-links{display:flex;flex-wrap:wrap;gap:14px;margin:28px 0 55px}
+.profile-links a{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:10px 22px;border-radius:5px;font-size:14px;font-weight:700;border:1px solid #08c7c9;color:#fff;transition:background .2s}
+.profile-links a:first-child{background:#08c7c9;color:#032e50}
+.profile-links a:hover{background:#35d9d9;color:#032e50}
+.publications-heading{font:700 30px 'Outfit',sans-serif;margin-bottom:23px}
+.publication-list{display:grid;gap:18px}
+.publication{background:#0b4967;border:1px solid rgba(172,227,240,.2);border-left:4px solid #08c7c9;border-radius:8px;padding:26px 30px;box-shadow:0 10px 28px rgba(0,0,0,.09)}
+.pub-meta{font-size:12px;letter-spacing:1px;text-transform:uppercase;font-weight:700;color:#42d7d7;margin-bottom:10px}
+.publication h3{font:600 clamp(18px,2vw,22px)/1.45 'Outfit',sans-serif;color:#fff;margin:0 0 12px}
+.publication p{font-size:14px;line-height:1.75;margin:0 0 7px}.publication .authors{color:#e2eff7}.publication .venue{color:#a9d2e2;font-style:italic;margin-bottom:0}
+@media(max-width:650px){.research-page{padding:42px 0 65px}.publication{padding:20px}.profile-links{margin-bottom:42px}}
+</style>
+</head>
+<body>
+<header class="site-header"><nav class="navbar container" aria-label="Main navigation">
+<a href="index.html#home" class="logo">MT<span>.</span></a>
+<button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">☰</button>
+<div class="nav-links" id="nav-links">
+<a href="index.html#home">Home</a>
+<a href="index.html#experience">Experience</a>
+<a href="research-output.html" class="active" aria-current="page">Research Output</a>
+<a href="index.html#prices">Prices</a>
+<a href="assets/resume/Moniesha_Thilakarathna_CV.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+</div></nav></header>
+<main class="research-page"><div class="container">
+<h1 class="page-heading">Research Output</h1><div class="heading-rule"></div>
+<p class="intro">Explore my research publications spanning robotic grasping, intelligent manipulation, automated food waste sorting, and engineering applications.</p>
+<div class="profile-links">
+<a href="https://scholar.google.com.au/citations?user=yuqXiowAAAAJ&amp;hl=en&amp;authuser=4" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
+<a href="https://www.researchgate.net/profile/Moniesha-Thilakarathna-3?ev=hdr_xprf" target="_blank" rel="noopener noreferrer">ResearchGate ↗</a>
+</div>
+<h2 class="publications-heading">Publications</h2><div class="publication-list"><article class="publication"><div class="pub-meta"><span>2026 · Conference</span></div><h3>FusionGrasp: A modular framework for integrating heterogeneous 6D grasp planners for multimodal cluttered sorting</h3><p class="authors">M. Thilakarathna, K. Dhananjaya, A. Wijesinghe, M. Vasziljevics, E. Hood, and D. Herath</p><p class="venue">Australasian Conference on Robotics and Automation (ACRA), 2026.</p></article>
+<article class="publication"><div class="pub-meta"><span>2026 · Preprint</span></div><h3>A Real-World Grasping-in-Clutter Performance Evaluation Benchmark for Robotic Food Waste Sorting</h3><p class="authors">M. Thilakarathna, X. Wang, M. Wang, D. Hinwood, S. Liu, and D. Herath</p><p class="venue">arXiv preprint arXiv:2602.18835, 2026.</p></article>
+<article class="publication"><div class="pub-meta"><span>2025 · Conference</span></div><h3>Robotic grasping for automated sorting of complex, highly contaminated industrial food waste: A benchmark study</h3><p class="authors">M. Thilakarathna, X. Wang, A. Wijesinghe, D. Hinwood, and D. Herath</p><p class="venue">2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), IEEE, 2025, pp. 6757–6764.</p></article>
+<article class="publication"><div class="pub-meta"><span>2022 · Conference</span></div><h3>Thermographic inspection system for surface coating defects on aircraft fuselage</h3><p class="authors">W. Thilakarathna, A. A. Ziyard, N. D. Wijesinha, K. V. P. Dhammika, and G. Gaspe</p><p class="venue">15th International Research Conference, 2022, pp. 105–237.</p></article></div>
+</div></main>
+<script>
+const toggle=document.querySelector('.menu-toggle');const links=document.querySelector('.nav-links');
+toggle.addEventListener('click',()=>{const open=links.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');toggle.setAttribute('aria-expanded','false');}));
+</script></body></html>
