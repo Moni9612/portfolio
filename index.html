@@ -170,7 +170,7 @@
     <div class="research-tree">
 
       <svg class="research-tree-svg"
-           viewBox="0 0 1400 760"
+           viewBox="0 0 1400 590"
            xmlns="http://www.w3.org/2000/svg"
            role="img"
            aria-labelledby="tree-title tree-desc">
@@ -255,7 +255,30 @@
                   width="220%" height="220%">
             <feGaussianBlur stdDeviation="35"/>
           </filter>
+            
+<!-- COMMON SHAPE FOR ALL FOUR RESEARCH CARDS -->
 
+<path id="researchCardShape"
+      d="
+        M 35 0
+        H 245
+        Q 280 0 280 35
+        V 95
+        Q 280 125 250 125
+        H 225
+        Q 210 125 210 140
+        V 155
+        Q 210 180 180 180
+        H 100
+        Q 70 180 70 155
+        V 140
+        Q 70 125 55 125
+        H 35
+        Q 0 125 0 90
+        V 35
+        Q 0 0 35 0
+        Z
+      "/>
         </defs>
 
 
@@ -275,49 +298,13 @@
 <!-- ==================================
      TREE CONNECTIONS
      ================================== -->
-
-<g fill="none"
-   stroke="url(#branchGrad)"
-   stroke-width="34"
-   stroke-linecap="round"
-   stroke-linejoin="round">
-
-  <!-- LEFT OUTER: ROBOTIC SORTING -->
-  <path d="
-  M 670 165
-  C 660 215, 620 250, 550 250
-  H 360
-  C 280 250, 250 280, 250 350
-"/>
-
-  <!-- LEFT INNER: GRASP BENCHMARKING -->
-  <path d="
-  M 655 190
-  L 655 300
-  C 655 330, 565 330, 565 350
-"/>
-
-  <!-- BENCHMARKING CURVED LOOP -->
-  <path d="
-    M 485 425
-    C 485 350, 645 350, 645 425
-  "/>
-
-  <!-- RIGHT OUTER: MULTIMODAL GRASPING -->
-  <path d="
-  M 765 165
-  C 780 215, 825 250, 885 250
-  H 1050
-  C 1130 250, 1160 285, 1160 350
-"/>
-
-  <!-- RIGHT INNER: SOFT ROBOTIC GRIPPER DESIGN -->
-  <path d="
-  M 780 190
-  L 780 300
-  C 780 330, 850 330, 850 350
-"/>
-
+<g fill="none" stroke="url(#branchGrad)" stroke-width="30"
+   stroke-linecap="round" stroke-linejoin="round">
+  <!-- Each branch terminates behind its own card -->
+  <path d="M 650 185 C 630 240 535 250 400 250 H 310 C 265 250 235 280 235 345"/>
+  <path d="M 675 190 V 270 C 675 305 540 300 540 345"/>
+  <path d="M 725 190 V 270 C 725 305 845 300 845 345"/>
+  <path d="M 755 185 C 775 240 870 250 1000 250 H 1075 C 1120 250 1150 280 1150 345"/>
 </g>
 
 
@@ -358,209 +345,73 @@
 
 
         <!-- ==================================
-             LOWER LEFT:
-             GRASP BENCHMARKING
-             ================================== -->
+     FOUR IDENTICAL RESEARCH CARDS
+     Same shape, dimensions and baseline
+     ================================== -->
 
-        <g filter="url(#treeShadow)"
-   transform="translate(550 435) scale(0.80) translate(-550 -435) translate(0 -145)">
-
-          <path fill="url(#centreGrad)"
-                d="
-                  M 420 470
-                  H 680
-                  Q 730 470 730 520
-                  V 610
-                  Q 730 660 680 660
-                  H 665
-                  Q 655 660 655 675
-                  V 690
-                  Q 655 730 610 730
-                  H 510
-                  Q 465 730 465 690
-                  V 675
-                  Q 465 660 450 660
-                  H 420
-                  Q 370 660 370 610
-                  V 520
-                  Q 370 470 420 470
-                  Z
-                "/>
-
-        </g>
-
-        <text x="550" y="403"
-      text-anchor="middle"
-      class="tree-card-text tree-card-light">
-          <tspan x="550">Grasp</tspan>
-          <tspan x="550" dy="39">Benchmarking</tspan>
-        </text>
-
-
-        <!-- ==================================
-             LOWER RIGHT:
-             SOFT ROBOTIC GRIPPER DESIGN
-             ================================== -->
-
-        <g filter="url(#treeShadow)"
-   transform="translate(910 435) scale(0.80) translate(-910 -435) translate(0 -145)">
-
-          <path fill="url(#greenGrad)"
-                d="
-                  M 780 470
-                  H 1040
-                  Q 1090 470 1090 520
-                  V 605
-                  Q 1090 650 1045 650
-                  H 1025
-                  Q 1010 650 1010 670
-                  V 690
-                  Q 1010 720 965 720
-                  H 865
-                  Q 820 720 820 690
-                  V 670
-                  Q 820 650 805 650
-                  H 780
-                  Q 730 650 730 605
-                  V 520
-                  Q 730 470 780 470
-                  Z
-                "/>
-
-        </g>
-
-        <text x="910" y="405"
-      text-anchor="middle"
-      class="tree-card-text">
-          <tspan x="910">Soft Robotic</tspan>
-          <tspan x="910" dy="39">Gripper Design</tspan>
-        </text>
-
-
-        <!-- ==================================
-             UPPER LEFT:
-             ROBOTIC SORTING
-             ================================== -->
-
-        <g filter="url(#treeShadow)"
-   transform="translate(225 440) scale(0.80) translate(-225 -440) translate(-70 0)">
-
-          <path fill="url(#leftGrad)"
-                d="
-                  M 210 325
-                  H 410
-                  Q 465 325 465 380
-                  V 420
-                  Q 465 475 410 475
-                  H 400
-                  Q 385 475 385 495
-                  V 510
-                  Q 385 555 335 555
-                  H 250
-                  Q 200 555 200 510
-                  V 495
-                  Q 200 475 185 475
-                  H 180
-                  Q 125 475 125 420
-                  V 405
-                  Q 125 325 210 325
-                  Z
-                "/>
-
-        </g>
-
-        
-<text x="225" y="390"
-      text-anchor="middle"
-      class="tree-card-text">
-    <tspan x="225">Robotic</tspan>
-    <tspan x="225" dy="39">Sorting</tspan>
-</text>
-
-
-
-        <!-- ==================================
-             UPPER RIGHT:
-             MULTIMODAL GRASPING
-             ================================== -->
-
-        <g filter="url(#treeShadow)"
-   transform="translate(1220 420) scale(0.80) translate(-1220 -420) translate(70 0)">
-
-          <path fill="url(#rightGrad)"
-                d="
-                  M 1010 325
-                  H 1160
-                  Q 1175 325 1185 310
-                  Q 1195 295 1225 295
-                  H 1280
-                  Q 1340 295 1340 355
-                  V 405
-                  Q 1340 455 1290 455
-                  H 1265
-                  Q 1245 455 1245 475
-                  V 500
-                  Q 1245 540 1195 540
-                  H 1100
-                  Q 1050 540 1050 500
-                  V 475
-                  Q 1050 455 1030 455
-                  H 1010
-                  Q 955 455 955 400
-                  V 380
-                  Q 955 325 1010 325
-                  Z
-                "/>
-
-        </g>
-
-        
-<text x="1220" y="370"
-      text-anchor="middle"
-      class="tree-card-text">
-    <tspan x="1220">Multimodal</tspan>
-    <tspan x="1220" dy="39">Grasping</tspan>
-</text>
-
-
-<!-- INTERACTIVE RESEARCH CARD AREAS -->
-
-<g class="research-hit-area"
-   data-research="sorting"
-   tabindex="0"
-   role="button"
-   aria-label="Show Robotic Sorting description">
-  <rect x="55" y="325" width="340" height="235"
-        fill="transparent" />
+<g class="research-card" data-card="sorting">
+  <g filter="url(#treeShadow)" transform="translate(95 340)">
+    <use href="#researchCardShape" fill="url(#leftGrad)"/>
+  </g>
+  <text x="235" y="390" text-anchor="middle" class="tree-card-text"
+        pointer-events="none">
+    <tspan x="235">Robotic</tspan>
+    <tspan x="235" dy="39">Sorting</tspan>
+  </text>
+  <g class="research-hit-area" data-research="sorting" tabindex="0"
+     role="button" aria-label="Show Robotic Sorting description">
+    <use href="#researchCardShape" transform="translate(95 340)"
+         fill="transparent" pointer-events="all"/>
+  </g>
 </g>
 
-<g class="research-hit-area"
-   data-research="benchmarking"
-   tabindex="0"
-   role="button"
-   aria-label="Show Grasp Benchmarking description">
-  <rect x="370" y="325" width="360" height="245"
-        fill="transparent" />
+<g class="research-card" data-card="benchmarking">
+  <g filter="url(#treeShadow)" transform="translate(400 340)">
+    <use href="#researchCardShape" fill="url(#centreGrad)"/>
+  </g>
+  <text x="540" y="390" text-anchor="middle" class="tree-card-text tree-card-light"
+        pointer-events="none">
+    <tspan x="540">Grasp</tspan>
+    <tspan x="540" dy="39">Benchmarking</tspan>
+  </text>
+  <g class="research-hit-area" data-research="benchmarking" tabindex="0"
+     role="button" aria-label="Show Grasp Benchmarking description">
+    <use href="#researchCardShape" transform="translate(400 340)"
+         fill="transparent" pointer-events="all"/>
+  </g>
 </g>
 
-<g class="research-hit-area"
-   data-research="design"
-   tabindex="0"
-   role="button"
-   aria-label="Show Soft Robotic Gripper Design description">
-  <rect x="730" y="325" width="360" height="245"
-        fill="transparent" />
+<g class="research-card" data-card="design">
+  <g filter="url(#treeShadow)" transform="translate(705 340)">
+    <use href="#researchCardShape" fill="url(#greenGrad)"/>
+  </g>
+  <text x="845" y="390" text-anchor="middle" class="tree-card-text"
+        pointer-events="none">
+    <tspan x="845">Soft Robotic</tspan>
+    <tspan x="845" dy="39">Gripper Design</tspan>
+  </text>
+  <g class="research-hit-area" data-research="design" tabindex="0"
+     role="button" aria-label="Show Soft Robotic Gripper Design description">
+    <use href="#researchCardShape" transform="translate(705 340)"
+         fill="transparent" pointer-events="all"/>
+  </g>
 </g>
 
-<g class="research-hit-area"
-   data-research="multimodal"
-   tabindex="0"
-   role="button"
-   aria-label="Show Multimodal Grasping description">
-  <rect x="1025" y="295" width="375" height="250"
-        fill="transparent" />
+<g class="research-card" data-card="multimodal">
+  <g filter="url(#treeShadow)" transform="translate(1010 340)">
+    <use href="#researchCardShape" fill="url(#rightGrad)"/>
+  </g>
+  <text x="1150" y="390" text-anchor="middle" class="tree-card-text"
+        pointer-events="none">
+    <tspan x="1150">Multimodal</tspan>
+    <tspan x="1150" dy="39">Grasping</tspan>
+  </text>
+  <g class="research-hit-area" data-research="multimodal" tabindex="0"
+     role="button" aria-label="Show Multimodal Grasping description">
+    <use href="#researchCardShape" transform="translate(1010 340)"
+         fill="transparent" pointer-events="all"/>
+  </g>
 </g>
-
 
       </svg>
 
