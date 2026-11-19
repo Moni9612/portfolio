@@ -843,3 +843,61 @@ button {
 
 }
 
+
+/* ==========================================
+   RESEARCH OUTPUT - PUBLICATION REFERENCES
+   ========================================== */
+
+.publications-heading {
+    font-family: 'Outfit', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 28px;
+}
+
+.publication-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1050px;
+}
+
+.publication {
+    background: transparent;
+    border: none;
+    border-left: 3px solid #08c7c9;
+    border-radius: 0;
+    padding: 2px 0 2px 20px;
+    margin: 0;
+    box-shadow: none;
+}
+
+.publication p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.85;
+    color: #e2eff7;
+    margin: 0;
+    text-align: left;
+}
+
+.publication .pub-title {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.publication .pub-venue {
+    color: #42d7d7;
+    font-style: italic;
+}
+
+.publication .pub-details {
+    color: #c1dce9;
+}
+
+@media (max-width: 650px) {
+    .publication-list { gap: 18px; }
+    .publication { padding-left: 15px; }
+    .publication p { font-size: 14px; line-height: 1.8; }
+}
