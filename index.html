@@ -565,23 +565,55 @@ const projectLink = document.getElementById("research-project-link");
 
 let pinnedCard = null;
 
+
 function showResearch(key) {
-  const data = researchData[key];
-  if (!data) return;
+    const data = researchData[key];
+    if (!data) return;
 
-  descriptionTitle.textContent = data.title;
-  descriptionText.textContent = data.description;
+    descriptionTitle.textContent = data.title;
+    descriptionText.textContent = data.description;
 
-  if (data.url) {
-    projectLink.href = data.url;
-    projectLink.hidden = false;
-  } else {
-    projectLink.hidden = true;
-    projectLink.removeAttribute("href");
-  }
+    if (data.url) {
+        projectLink.href = data.url;
+        projectLink.hidden = false;
+    } else {
+        projectLink.hidden = true;
+        projectLink.removeAttribute("href");
+    }
 
-  descriptionPanel.hidden = false;
+    descriptionPanel.hidden = false;
+
+    // ==========================================
+    // RESEARCH VIDEO
+    // ==========================================
+
+    const videoContainer =
+        document.getElementById("research-video-container");
+
+    const researchVideo =
+        document.getElementById("research-video");
+
+    if (key === "sorting") {
+
+        videoContainer.hidden = false;
+
+        researchVideo.muted = true;
+
+        researchVideo.play().catch(() => {
+            // Autoplay may be blocked by the browser.
+        });
+
+    } else {
+
+        researchVideo.pause();
+
+        researchVideo.currentTime = 0;
+
+        videoContainer.hidden = true;
+
+    }
 }
+
 
 function hideResearch() {
   if (pinnedCard !== null) return;
