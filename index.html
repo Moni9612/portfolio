@@ -568,9 +568,13 @@ function showResearch(key) {
     // RESEARCH PROJECT LINK
     // ==========================================
 
-    // Always hide the View Research Project link
-projectLink.hidden = true;
-projectLink.removeAttribute("href");
+    if (data.url) {
+    projectLink.href = data.url;
+    projectLink.hidden = false;
+} else {
+    projectLink.hidden = true;
+    projectLink.removeAttribute("href");
+}
 
     descriptionPanel.hidden = false;
 
