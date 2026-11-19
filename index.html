@@ -424,14 +424,6 @@
 
   <p id="research-description-text"></p>
 
-  <!-- Reserved for future project links -->
-  <a id="research-project-link"
-     class="research-project-link"
-     target="_blank"
-     rel="noopener noreferrer"
-     hidden>
-    View Research Project →
-  </a>
 <!-- ROBOTIC SORTING VIDEO -->
 
 <div id="research-video-container"
@@ -576,13 +568,9 @@ function showResearch(key) {
     // RESEARCH PROJECT LINK
     // ==========================================
 
-    if (data.url) {
-        projectLink.href = data.url;
-        projectLink.hidden = false;
-    } else {
-        projectLink.hidden = true;
-        projectLink.removeAttribute("href");
-    }
+    // Always hide the View Research Project link
+projectLink.hidden = true;
+projectLink.removeAttribute("href");
 
     descriptionPanel.hidden = false;
 
