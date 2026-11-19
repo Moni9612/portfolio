@@ -800,4 +800,46 @@ button {
         text-align: left;
     }
 }
+/* ==========================================
+   RESEARCH DESCRIPTION VIDEO
+   ========================================== */
+
+.research-video-container {
+    width: 100%;
+    margin-top: 25px;
+    border-radius: 8px;
+    overflow: hidden;
+
+    background: #032e50;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.research-video-container[hidden] {
+    display: none;
+}
+
+.research-video-container video {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    max-height: 450px;
+    object-fit: contain;
+
+    border-radius: 8px;
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .research-video-container {
+        margin-top: 20px;
+    }
+
+    .research-video-container video {
+        max-height: 280px;
+    }
+
+}
 
