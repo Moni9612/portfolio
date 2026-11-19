@@ -1,0 +1,544 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <meta name="description"
+          content="Professional and academic experience of Moniesha Thilakarathna.">
+
+    <title>Experience | Moniesha Thilakarathna</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Main Portfolio Stylesheet -->
+    <link rel="stylesheet" href="style.css?v=7">
+
+    <style>
+
+        /* ==========================================
+           EXPERIENCE PAGE
+           ========================================== */
+
+        .experience-page {
+            background:
+                radial-gradient(
+                    ellipse at 80% 40%,
+                    rgba(0,125,165,0.18),
+                    transparent 55%
+                ),
+                #04445e;
+
+            min-height: calc(100vh - 80px);
+            padding: 65px 0 90px;
+            color: #ffffff;
+        }
+
+        /* PAGE TITLE */
+
+        .experience-page .page-heading {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(38px, 5vw, 64px);
+            font-weight: 700;
+            line-height: 1.12;
+            letter-spacing: -1px;
+            margin-bottom: 22px;
+        }
+
+        .experience-page .heading-rule {
+            width: 90px;
+            height: 5px;
+            background: #08c7c9;
+            border-radius: 5px;
+            margin-bottom: 28px;
+        }
+
+        .experience-page .intro {
+            color: #e2eff7;
+            max-width: 850px;
+            font-size: 16px;
+            line-height: 1.85;
+            margin-bottom: 45px;
+        }
+
+        /* ==========================================
+           EXPERIENCE ENTRIES
+           ========================================== */
+
+        .experience-list {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .experience-item {
+            background: #0b4967;
+
+            border: 1px solid rgba(172,227,240,0.2);
+            border-left: 4px solid #08c7c9;
+
+            border-radius: 8px;
+            padding: 30px 35px;
+
+            box-shadow:
+                0 10px 28px rgba(0,0,0,0.09);
+        }
+
+        /* POSITION HEADER */
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 25px;
+            margin-bottom: 18px;
+        }
+
+        .experience-position {
+            font-family: 'Outfit', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.35;
+        }
+
+        .experience-date {
+            color: #42d7d7;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+            padding-top: 5px;
+        }
+
+        .experience-institution {
+            color: #b9deeb;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-top: 6px;
+        }
+
+        /* SECTION LABELS */
+
+        .experience-subheading {
+            font-family: 'Outfit', sans-serif;
+            font-size: 17px;
+            font-weight: 700;
+            color: #42d7d7;
+            margin-top: 22px;
+            margin-bottom: 12px;
+        }
+
+        /* RESPONSIBILITIES */
+
+        .experience-details {
+            padding-left: 22px;
+            margin: 0;
+            color: #e2eff7;
+        }
+
+        .experience-details li {
+            font-size: 14px;
+            line-height: 1.85;
+            margin-bottom: 9px;
+            padding-left: 5px;
+        }
+
+        .experience-details li::marker {
+            color: #08c7c9;
+        }
+
+        /* NESTED PROJECT LIST */
+
+        .experience-details ul {
+            padding-left: 24px;
+            margin-top: 8px;
+        }
+
+        /* ==========================================
+           RESPONSIVE
+           ========================================== */
+
+        @media (max-width: 650px) {
+
+            .experience-page {
+                padding: 42px 0 65px;
+            }
+
+            .experience-item {
+                padding: 23px 20px;
+            }
+
+            .experience-header {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .experience-position {
+                font-size: 21px;
+            }
+
+            .experience-date {
+                font-size: 13px;
+            }
+
+            .experience-institution {
+                font-size: 14px;
+            }
+
+            .experience-details li {
+                font-size: 13px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ==========================================
+         NAVIGATION BAR
+         ========================================== -->
+
+    <header class="site-header">
+
+        <nav class="navbar container"
+             aria-label="Main navigation">
+
+            <a href="index.html" class="logo">
+                MT<span>.</span>
+            </a>
+
+            <button class="menu-toggle"
+                    type="button"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false"
+                    aria-controls="nav-links">
+                ☰
+            </button>
+
+            <div class="nav-links" id="nav-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="experience.html"
+                   class="active"
+                   aria-current="page">
+                    Experience
+                </a>
+
+                <a href="research-output.html">
+                    Research Output
+                </a>
+
+                <a href="prizes.html">
+                    Prizes
+                </a>
+
+                <a href="assets/resume/CV-Moniesha_Thilakarathna.pdf"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Resume
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ==========================================
+         EXPERIENCE CONTENT
+         ========================================== -->
+
+    <main class="experience-page">
+
+        <div class="container">
+
+            <h1 class="page-heading">
+                Experience
+            </h1>
+
+            <div class="heading-rule"></div>
+
+            <p class="intro">
+                My professional experience spans academic
+                teaching, mechatronics engineering, robotics,
+                and industrial automation.
+            </p>
+
+
+            <div class="experience-list">
+
+
+                <!-- ==================================
+                     1. CASUAL ACADEMIC
+                     ================================== -->
+
+                <article class="experience-item">
+
+                    <div class="experience-header">
+
+                        <div>
+
+                            <h2 class="experience-position">
+                                Casual Academic - Tutor
+                            </h2>
+
+                            <p class="experience-institution">
+                                Faculty of Science and Technology
+                                <br>
+                                University of Canberra, ACT, Australia
+                            </p>
+
+                        </div>
+
+                        <div class="experience-date">
+                            Jul. 2024 – Present
+                        </div>
+
+                    </div>
+
+                    <ul class="experience-details">
+
+                        <li>
+                            Delivering tutorial sessions for
+                            undergraduate students in the
+                            Technology Innovation and
+                            Entrepreneurship module.
+                        </li>
+
+                    </ul>
+
+                </article>
+
+
+                <!-- ==================================
+                     2. TEACHING ASSISTANT
+                     ================================== -->
+
+                <article class="experience-item">
+
+                    <div class="experience-header">
+
+                        <div>
+
+                            <h2 class="experience-position">
+                                Teaching Assistant
+                            </h2>
+
+                            <p class="experience-institution">
+                                General Sir John Kotelawala
+                                Defence University
+                                <br>
+                                Ratmalana, Sri Lanka
+                            </p>
+
+                        </div>
+
+                        <div class="experience-date">
+                            Mar. 2022 – Jul. 2023
+                        </div>
+
+                    </div>
+
+
+                    <h3 class="experience-subheading">
+                        Experience
+                    </h3>
+
+                    <ul class="experience-details">
+
+                        <li>
+                            Conducting tutorial sessions for
+                            undergraduates in Mechatronics Engineering.
+                        </li>
+
+                        <li>
+                            Conducting laboratory experimental sessions
+                            for undergraduates in the Mechanics and
+                            Control Laboratory.
+                        </li>
+
+                        <li>
+                            Assisting lecturers in grading laboratory
+                            reports, assignments, and tutorials.
+                        </li>
+
+                        <li>
+                            Assisted courses including:
+                            ME2132 – Dynamics of Mechanical Systems,
+                            MC2212 – Sensors and Actuators,
+                            ME2213 – Control System Engineering,
+                            ME2233 – Mechanics of Machines,
+                            MC3203 – Principles of Automation,
+                            and ME3113 – Advanced Control Systems.
+                        </li>
+
+                    </ul>
+
+
+                    <h3 class="experience-subheading">
+                        Roles Undertaken
+                    </h3>
+
+                    <ul class="experience-details">
+
+                        <li>
+                            Coordinator – Year 1 Mechatronic
+                            Engineering Degree Programme.
+                        </li>
+
+                        <li>
+                            Member of Board 2: Research Cell /
+                            IRC / Journal / FICB Faculty-level committee.
+                        </li>
+
+                        <li>
+                            Coordinator for LMS and Department Website –
+                            Department of Mechanical Engineering.
+                        </li>
+
+                    </ul>
+
+                </article>
+
+
+                <!-- ==================================
+                     3. AUTOMATION ENGINEER
+                     ================================== -->
+
+                <article class="experience-item">
+
+                    <div class="experience-header">
+
+                        <div>
+
+                            <h2 class="experience-position">
+                                Automation Engineer (Internship)
+                            </h2>
+
+                            <p class="experience-institution">
+                                MAS Intimates (Pvt.) Ltd.
+                                <br>
+                                Ratmalana, Sri Lanka
+                            </p>
+
+                        </div>
+
+                        <div class="experience-date">
+                            Jul. 2021 – Feb. 2022
+                        </div>
+
+                    </div>
+
+
+                    <ul class="experience-details">
+
+                        <li>
+                            Completed industrial training at the
+                            Automation Department of MAS Intimates,
+                            part of MAS Holdings, one of South Asia's
+                            largest apparel manufacturers.
+                        </li>
+
+                        <li>
+                            Gained practical experience in
+                            mechatronic system design,
+                            solid modelling, circuit design,
+                            and manufacturing processes.
+                        </li>
+
+                    </ul>
+
+
+                    <h3 class="experience-subheading">
+                        Projects Involved
+                    </h3>
+
+                    <ul class="experience-details">
+
+                        <li>
+                            Designed a retracting mechanism for
+                            an industrial sewing machine used
+                            for elastic waistband attaching.
+                        </li>
+
+                        <li>
+                            Designed and developed a control box
+                            for a fabric molding machine.
+                        </li>
+
+                        <li>
+                            Designed a pick-and-place card
+                            stacking mechanism.
+                        </li>
+
+                    </ul>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ==========================================
+         MOBILE NAVIGATION SCRIPT
+         ========================================== -->
+
+    <script>
+
+        const toggle =
+            document.querySelector('.menu-toggle');
+
+        const links =
+            document.querySelector('.nav-links');
+
+        toggle.addEventListener('click', () => {
+
+            const open =
+                links.classList.toggle('open');
+
+            toggle.setAttribute(
+                'aria-expanded',
+                String(open)
+            );
+
+        });
+
+        links.querySelectorAll('a').forEach(a => {
+
+            a.addEventListener('click', () => {
+
+                links.classList.remove('open');
+
+                toggle.setAttribute(
+                    'aria-expanded',
+                    'false'
+                );
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
