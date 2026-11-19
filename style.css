@@ -901,3 +901,36 @@ button {
     .publication { padding-left: 15px; }
     .publication p { font-size: 14px; line-height: 1.8; }
 }
+
+/* ==========================================
+   GET IN TOUCH BUTTON
+   ========================================== */
+
+.hero-contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #08c7c9;
+    color: #053456;
+
+    padding: 12px 20px;
+    border-radius: 5px;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+
+    text-decoration: none;
+    white-space: nowrap;
+
+    border: none;
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.hero-contact-btn:hover {
+    background: #35d9d9;
+    color: #053456;
+}
