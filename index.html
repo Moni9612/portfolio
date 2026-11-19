@@ -566,12 +566,17 @@ const projectLink = document.getElementById("research-project-link");
 let pinnedCard = null;
 
 
+
 function showResearch(key) {
     const data = researchData[key];
     if (!data) return;
 
     descriptionTitle.textContent = data.title;
     descriptionText.textContent = data.description;
+
+    // ==========================================
+    // RESEARCH PROJECT LINK
+    // ==========================================
 
     if (data.url) {
         projectLink.href = data.url;
@@ -584,7 +589,7 @@ function showResearch(key) {
     descriptionPanel.hidden = false;
 
     // ==========================================
-    // RESEARCH VIDEO
+    // RESEARCH VIDEOS
     // ==========================================
 
     const videoContainer =
@@ -593,7 +598,22 @@ function showResearch(key) {
     const researchVideo =
         document.getElementById("research-video");
 
-    if (key === "sorting") {
+    // Video paths for each research contribution
+    const videoSources = {
+        sorting: "assets/video/robotic_sorting.mp4",
+        benchmarking: "assets/video/grasp_benchmarking.mp4"
+    };
+
+    if (videoSources[key]) {
+
+        // Only change source when selecting a different video
+        const newSource = videoSources[key];
+
+        if (researchVideo.getAttribute("src") !== newSource) {
+            researchVideo.pause();
+            researchVideo.setAttribute("src", newSource);
+            researchVideo.load();
+        }
 
         videoContainer.hidden = false;
 
@@ -606,13 +626,11 @@ function showResearch(key) {
     } else {
 
         researchVideo.pause();
-
-        researchVideo.currentTime = 0;
-
         videoContainer.hidden = true;
 
     }
 }
+
 
 
 function hideResearch() {
