@@ -226,66 +226,49 @@
             color: #ffffff;
             font-weight: 700;
         }
-        /* VOLUNTEERING: 40% TEXT / 60% COLLAGE */
-        .volunteering-layout {
+        /* Volunteering: 2026 split evenly between text and collage */
+        .volunteering-2026-layout {
             display: grid;
-            grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
-            gap: 30px;
-            align-items: stretch;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            gap: 35px;
+            align-items: center;
             width: 100%;
         }
-
-        .volunteering-content {
-            display: grid;
-            align-content: start;
-            gap: 30px;
+        .volunteering-2026-content { min-width: 0; }
+        .volunteering-2026-content li { overflow-wrap: break-word; }
+        .volunteering-2026-image {
             min-width: 0;
-            max-width: 100%;
-            overflow-wrap: break-word;
-        }
-
-        .activity-card { padding: 0; min-width: 0; }
-
-        .volunteering-image {
+            width: 100%;
+            margin: 0;
+            padding: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            min-width: 0;
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
             background: transparent;
-            border: none;
+            border: 0;
             box-shadow: none;
-            overflow: hidden;
         }
-
-        .volunteering-image img {
+        .volunteering-2026-image img {
             display: block;
             width: 100%;
-            height: auto;
             max-width: 100%;
-            max-height: 100%;
+            height: auto;
             object-fit: contain;
-            object-position: center;
-            border: none;
-            border-radius: 0;
+            border: 0;
             box-shadow: none;
-            transform: none;
         }
-
+        /* 2025 follows below and occupies the full content width */
+        .volunteering-2025-content {
+            width: 100%;
+            margin-top: 35px;
+        }
+        .activity-card { padding: 0; }
         @media (max-width: 768px) {
-            .volunteering-layout {
+            .volunteering-2026-layout {
                 grid-template-columns: minmax(0, 1fr);
                 gap: 25px;
             }
-            .volunteering-image { height: auto; }
-            .volunteering-image img {
-                width: 100%;
-                height: auto;
-                max-height: none;
-            }
+            .volunteering-2025-content { margin-top: 35px; }
         }
 
     </style>
@@ -572,34 +555,36 @@
             <!-- VOLUNTEERING AND COMMUNITY ENGAGEMENT -->
             <section class="experience-section" id="volunteering" aria-labelledby="volunteering-heading">
                 <h2 class="section-heading" id="volunteering-heading">Volunteering &amp; Community Engagement</h2>
-                <div class="volunteering-layout">
-                    <div class="volunteering-content">
-                        <div class="experience-item activity-card">
-                            <h3 class="activity-year">2026</h3>
-                            <ul class="experience-details activity-list">
-                                <li><strong>Sri Lanka Festival 2026</strong> – Sri Lanka High Commission, Canberra | Represented the Collaborative Robotics Lab (CRL) and supported robotics outreach and community engagement activities.</li>
-                                <li><strong>Canberra Brick Show 2026</strong> – Canberra | Participated in interactive robotics demonstrations and hands-on STEM engagement activities for children and the public.</li>
-                                <li><strong>HDR Student Symposium 2026</strong> – University of Canberra | Served as a roundtable facilitator for “International HDR Experiences: Lived International Experiences,” supporting discussions among HDR students.</li>
-                                <li><strong>Visit of the Sri Lankan High Commissioner</strong> – University of Canberra | Participated in the CRL research showcase, sharing insights into ongoing robotics research with the visiting delegation.</li>
-                                <li><strong>UC Open Day 2026</strong> – Faculty of Science and Technology, University of Canberra | Supported interactive robotics demonstrations and engagement activities for prospective students, families, and visitors.</li>
-                            </ul>
-                        </div>
-                        <div class="experience-item activity-card">
-                            <h3 class="activity-year">2025</h3>
-                            <ul class="experience-details activity-list">
-                                <li><strong>Collaborative Robotics Lab (CRL) Launch</strong> – University of Canberra | Supported the lab launch and research engagement activities with academic and industry guests.</li>
-                                <li><strong>UC Open Day 2025</strong> – University of Canberra | Participated in robotics outreach activities, engaging with prospective students and visitors.</li>
-                                <li><strong>AgriFutures Australia Stakeholder Summit Visit</strong> – Collaborative Robotics Lab, University of Canberra | Supported the organisation and hosting of the AgriFutures Australia delegation and research engagement activities.</li>
-                                <li><strong>ACT Political Representatives' Visit</strong> – Collaborative Robotics Lab, University of Canberra | Participated in the robotics research showcase and engagement activities with visiting political representatives.</li>
-                                <li><strong>Harvest Day Out 2025</strong> – Lanyon Homestead, Canberra | Conducted interactive apple-picking demonstrations using a Kinova robotic arm and Xbox controller, engaging children and families in hands-on robotics activities.</li>
-                            </ul>
-                        </div>
+
+                <!-- 2026: 50% text and 50% image -->
+                <div class="volunteering-2026-layout">
+                    <div class="volunteering-2026-content">
+                        <h3 class="activity-year">2026</h3>
+                        <ul class="experience-details activity-list">
+                            <li><strong>Sri Lanka Festival 2026</strong> – Sri Lanka High Commission, Canberra | Represented the Collaborative Robotics Lab (CRL) and supported robotics outreach and community engagement activities.</li>
+                            <li><strong>Canberra Brick Show 2026</strong> – Canberra | Participated in interactive robotics demonstrations and hands-on STEM engagement activities for children and the public.</li>
+                            <li><strong>HDR Student Symposium 2026</strong> – University of Canberra | Served as a roundtable facilitator for “International HDR Experiences: Lived International Experiences,” supporting discussions among HDR students.</li>
+                            <li><strong>Visit of the Sri Lankan High Commissioner</strong> – University of Canberra | Participated in the CRL research showcase, sharing insights into ongoing robotics research with the visiting delegation.</li>
+                            <li><strong>UC Open Day 2026</strong> – Faculty of Science and Technology, University of Canberra | Supported interactive robotics demonstrations and engagement activities for prospective students, families, and visitors.</li>
+                        </ul>
                     </div>
-                    <figure class="volunteering-image">
+                    <figure class="volunteering-2026-image">
                         <img src="assets/images/Volunteering_Collage.png"
                              alt="Collage of volunteering, community engagement and robotics outreach activities"
                              loading="lazy">
                     </figure>
+                </div>
+
+                <!-- 2025: full-width text -->
+                <div class="volunteering-2025-content">
+                    <h3 class="activity-year">2025</h3>
+                    <ul class="experience-details activity-list">
+                        <li><strong>Collaborative Robotics Lab (CRL) Launch</strong> – University of Canberra | Supported the lab launch and research engagement activities with academic and industry guests.</li>
+                        <li><strong>UC Open Day 2025</strong> – University of Canberra | Participated in robotics outreach activities, engaging with prospective students and visitors.</li>
+                        <li><strong>AgriFutures Australia Stakeholder Summit Visit</strong> – Collaborative Robotics Lab, University of Canberra | Supported the organisation and hosting of the AgriFutures Australia delegation and research engagement activities.</li>
+                        <li><strong>ACT Political Representatives' Visit</strong> – Collaborative Robotics Lab, University of Canberra | Participated in the robotics research showcase and engagement activities with visiting political representatives.</li>
+                        <li><strong>Harvest Day Out 2025</strong> – Lanyon Homestead, Canberra | Conducted interactive apple-picking demonstrations using a Kinova robotic arm and Xbox controller, engaging children and families in hands-on robotics activities.</li>
+                    </ul>
                 </div>
             </section>
 
