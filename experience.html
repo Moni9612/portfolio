@@ -226,143 +226,68 @@
             color: #ffffff;
             font-weight: 700;
         }
-        /* 60:40 CONTENT AND IMAGE LAYOUT */
+        /* VOLUNTEERING: 40% TEXT / 60% COLLAGE */
         .volunteering-layout {
             display: grid;
-            grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-            gap: 24px;
-            align-items: start;
+            grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+            gap: 30px;
+            align-items: stretch;
+            width: 100%;
         }
+
         .volunteering-content {
             display: grid;
+            align-content: start;
             gap: 30px;
             min-width: 0;
+            max-width: 100%;
+            overflow-wrap: break-word;
         }
-        .activity-card {
+
+        .activity-card { padding: 0; min-width: 0; }
+
+        .volunteering-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0;
             padding: 0;
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            overflow: hidden;
         }
-       
-/* RIGHT IMAGE AREA */
 
-.volunteering-image {
-    width: 100%;
-    height: 100%;
-    margin: 0 !important;
-    padding: 0 !important;
+        .volunteering-image img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            object-position: center;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            transform: none;
+        }
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        @media (max-width: 768px) {
+            .volunteering-layout {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 25px;
+            }
+            .volunteering-image { height: auto; }
+            .volunteering-image img {
+                width: 100%;
+                height: auto;
+                max-height: none;
+            }
+        }
 
-    background: transparent !important;
-    border: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-
-    overflow: visible;
-}
-
-/* ENLARGE COLLAGE EQUALLY FROM ALL SIDES */
-
-.volunteering-image img {
-    display: block;
-
-    width: 140% !important;
-    max-width: none !important;
-    height: auto !important;
-    max-height: none !important;
-
-    object-fit: contain;
-    object-position: center;
-
-    border: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-}
-
-/* MOBILE */
-
-@media (max-width: 768px) {
-    .volunteering-image {
-        height: auto;
-    }
-
-    .volunteering-image img {
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-    }
-}
-
-    
-/* VOLUNTEERING - 40:60 LAYOUT */
-
-.volunteering-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
-    gap: 30px;
-    align-items: stretch;
-}
-
-/* Left content */
-.volunteering-grid > :first-child {
-    min-width: 0;
-}
-
-/* Right image area */
-.volunteering-image {
-    width: 100%;
-    height: 100%;
-    min-width: 0;
-
-    margin: 0 !important;
-    padding: 0 !important;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: transparent !important;
-    border: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-}
-
-/* Enlarge collage while preserving proportions */
-.volunteering-image img {
-    display: block;
-
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-
-    object-fit: contain;
-    object-position: center;
-
-    border: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-    .volunteering-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .volunteering-image {
-        height: auto;
-    }
-
-    .volunteering-image img {
-        width: 100%;
-        height: auto;
-    }
-}
-
-        
     </style>
 
 </head>
