@@ -264,6 +264,60 @@
             .activity-card { padding: 0; }
             .activity-list li { margin-bottom: 9px; }
         }
+/* ==========================================
+   VOLUNTEERING SECTION - 50:50 LAYOUT
+   ========================================== */
+
+.volunteering-grid,
+.community-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 35px;
+    align-items: start;
+}
+
+/* Remove image container box */
+
+.volunteering-image,
+.community-image,
+.volunteering-visual,
+.community-visual {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+
+    padding: 0 !important;
+    width: 100%;
+}
+
+/* Make image larger without stretching */
+
+.volunteering-image img,
+.community-image img,
+.volunteering-visual img,
+.community-visual img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto !important;
+
+    object-fit: contain;
+    border-radius: 0;
+}
+
+/* Mobile responsive layout */
+
+@media (max-width: 768px) {
+
+    .volunteering-grid,
+    .community-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+}
+        
 
     </style>
 
