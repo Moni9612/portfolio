@@ -241,29 +241,59 @@
         .activity-card {
             padding: 0;
         }
-        .volunteering-image {
-            margin: 0;
-            width: 100%;
-            position: sticky;
-            top: 100px;
-        }
-        .volunteering-image img {
-            display: block;
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            border: 1px solid rgba(172,227,240,0.2);
-            box-shadow: 0 10px 28px rgba(0,0,0,0.14);
-        }
-        @media (max-width: 850px) {
-            .volunteering-layout { grid-template-columns: 1fr; }
-            .volunteering-image { position: static; max-width: 650px; }
-        }
-        @media (max-width: 650px) {
-            .experience-section + .experience-section { margin-top: 42px; }
-            .activity-card { padding: 0; }
-            .activity-list li { margin-bottom: 9px; }
-        }
+       
+/* RIGHT IMAGE AREA */
+
+.volunteering-image {
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+
+    overflow: visible;
+}
+
+/* ENLARGE COLLAGE EQUALLY FROM ALL SIDES */
+
+.volunteering-image img {
+    display: block;
+
+    width: 140% !important;
+    max-width: none !important;
+    height: auto !important;
+    max-height: none !important;
+
+    object-fit: contain;
+    object-position: center;
+
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+    .volunteering-image {
+        height: auto;
+    }
+
+    .volunteering-image img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
+
     
 /* ==========================================
    VOLUNTEERING - 50:50 LAYOUT
