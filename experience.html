@@ -8,7 +8,7 @@
           content="width=device-width, initial-scale=1">
 
     <meta name="description"
-          content="Professional and academic experience of Moniesha Thilakarathna.">
+          content="Professional experience, volunteering, community engagement, and invited talks of Moniesha Thilakarathna.">
 
     <title>Experience | Moniesha Thilakarathna</title>
 
@@ -80,7 +80,7 @@
         .experience-list {
             display: flex;
             flex-direction: column;
-            gap: 28px;
+            gap: 20px;
         }
 
         .experience-item {
@@ -150,8 +150,8 @@
 
         .experience-details li {
             font-size: 14px;
-            line-height: 1.85;
-            margin-bottom: 9px;
+            line-height: 1.65;
+            margin-bottom: 5px;
             padding-left: 5px;
         }
 
@@ -200,6 +200,74 @@
             .experience-details li {
                 font-size: 13px;
             }
+        }
+
+
+        /* SECTION HEADINGS AND SPACING */
+        .experience-section + .experience-section {
+            margin-top: 58px;
+        }
+        .section-heading {
+            font: 700 clamp(25px, 3vw, 34px)/1.25 'Outfit', sans-serif;
+            color: #ffffff;
+            margin: 0 0 24px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid rgba(8,199,201,0.45);
+        }
+        .activity-year {
+            font: 700 22px/1.3 'Outfit', sans-serif;
+            color: #42d7d7;
+            margin: 0 0 14px;
+        }
+        .activity-list li {
+            margin-bottom: 11px;
+            line-height: 1.65;
+        }
+        .activity-list li:last-child,
+        .experience-details li:last-child {
+            margin-bottom: 0;
+        }
+        .activity-list strong {
+            color: #ffffff;
+            font-weight: 700;
+        }
+        /* 60:40 CONTENT AND IMAGE LAYOUT */
+        .volunteering-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+            gap: 24px;
+            align-items: start;
+        }
+        .volunteering-content {
+            display: grid;
+            gap: 20px;
+            min-width: 0;
+        }
+        .activity-card {
+            padding: 26px 28px;
+        }
+        .volunteering-image {
+            margin: 0;
+            width: 100%;
+            position: sticky;
+            top: 100px;
+        }
+        .volunteering-image img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid rgba(172,227,240,0.2);
+            box-shadow: 0 10px 28px rgba(0,0,0,0.14);
+        }
+        @media (max-width: 850px) {
+            .volunteering-layout { grid-template-columns: 1fr; }
+            .volunteering-image { position: static; max-width: 650px; }
+        }
+        @media (max-width: 650px) {
+            .experience-section + .experience-section { margin-top: 42px; }
+            .activity-card { padding: 23px 20px; }
+            .activity-list li { margin-bottom: 9px; }
         }
 
     </style>
@@ -275,13 +343,13 @@
             <div class="heading-rule"></div>
 
             <p class="intro">
-                My professional experience spans academic
-                teaching, mechatronics engineering, robotics,
-                and industrial automation.
+                My experience includes academic teaching, mechatronics engineering, robotics outreach, community engagement, and invited presentations.
             </p>
 
 
-            <div class="experience-list">
+            <section class="experience-section" id="professional-experience" aria-labelledby="professional-heading">
+                <h2 class="section-heading" id="professional-heading">Professional Experience</h2>
+                <div class="experience-list">
 
 
                 <!-- ==================================
@@ -481,6 +549,53 @@
 
 
             </div>
+            </section>
+
+            <!-- VOLUNTEERING AND COMMUNITY ENGAGEMENT -->
+            <section class="experience-section" id="volunteering" aria-labelledby="volunteering-heading">
+                <h2 class="section-heading" id="volunteering-heading">Volunteering &amp; Community Engagement</h2>
+                <div class="volunteering-layout">
+                    <div class="volunteering-content">
+                        <div class="experience-item activity-card">
+                            <h3 class="activity-year">2026</h3>
+                            <ul class="experience-details activity-list">
+                                <li><strong>Sri Lanka Festival 2026</strong> – Sri Lanka High Commission, Canberra | Represented the Collaborative Robotics Lab (CRL) and supported robotics outreach and community engagement activities.</li>
+                                <li><strong>Canberra Brick Show 2026</strong> – Canberra | Participated in interactive robotics demonstrations and hands-on STEM engagement activities for children and the public.</li>
+                                <li><strong>HDR Student Symposium 2026</strong> – University of Canberra | Served as a roundtable facilitator for “International HDR Experiences: Lived International Experiences,” supporting discussions among HDR students.</li>
+                                <li><strong>Visit of the Sri Lankan High Commissioner</strong> – University of Canberra | Participated in the CRL research showcase, sharing insights into ongoing robotics research with the visiting delegation.</li>
+                                <li><strong>UC Open Day 2026</strong> – Faculty of Science and Technology, University of Canberra | Supported interactive robotics demonstrations and engagement activities for prospective students, families, and visitors.</li>
+                            </ul>
+                        </div>
+                        <div class="experience-item activity-card">
+                            <h3 class="activity-year">2025</h3>
+                            <ul class="experience-details activity-list">
+                                <li><strong>Collaborative Robotics Lab (CRL) Launch</strong> – University of Canberra | Supported the lab launch and research engagement activities with academic and industry guests.</li>
+                                <li><strong>UC Open Day 2025</strong> – University of Canberra | Participated in robotics outreach activities, engaging with prospective students and visitors.</li>
+                                <li><strong>AgriFutures Australia Stakeholder Summit Visit</strong> – Collaborative Robotics Lab, University of Canberra | Supported the organisation and hosting of the AgriFutures Australia delegation and research engagement activities.</li>
+                                <li><strong>ACT Political Representatives' Visit</strong> – Collaborative Robotics Lab, University of Canberra | Participated in the robotics research showcase and engagement activities with visiting political representatives.</li>
+                                <li><strong>Harvest Day Out 2025</strong> – Lanyon Homestead, Canberra | Conducted interactive apple-picking demonstrations using a Kinova robotic arm and Xbox controller, engaging children and families in hands-on robotics activities.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <figure class="volunteering-image">
+                        <img src="assets/images/Volunteering_Collage.png"
+                             alt="Collage of volunteering, community engagement and robotics outreach activities"
+                             loading="lazy">
+                    </figure>
+                </div>
+            </section>
+
+            <!-- INVITED TALKS AND PRESENTATIONS -->
+            <section class="experience-section" id="invited-talks" aria-labelledby="talks-heading">
+                <h2 class="section-heading" id="talks-heading">Invited Talks &amp; Presentations</h2>
+                <article class="experience-item activity-card">
+                    <h3 class="activity-year">2026</h3>
+                    <ul class="experience-details activity-list">
+                        <li><strong>IEEE Global Soft Robotics Day 2026 – Australian Hub</strong> – CSIRO QCAT, Pullenvale, Brisbane | Presented PhD research on robotic grasping for automated food waste sorting, sharing the research journey from conventional robotic grasping to soft and multimodal 6D grasping approaches.</li>
+                        <li><strong>Biotechnology: Food, Fibre, Future Student Conference 2026</strong> – Academy of Future Skills, ACT Education Directorate | Delivered a public talk to school students on robotics, innovation, and solving real-world problems, supported by interactive robotics demonstrations.</li>
+                    </ul>
+                </article>
+            </section>
 
         </div>
 
