@@ -80,20 +80,15 @@
         .experience-list {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 35px;
         }
 
         .experience-item {
-            background: #0b4967;
-
-            border: 1px solid rgba(172,227,240,0.2);
-            border-left: 4px solid #08c7c9;
-
-            border-radius: 8px;
-            padding: 30px 35px;
-
-            box-shadow:
-                0 10px 28px rgba(0,0,0,0.09);
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            padding: 0;
+            box-shadow: none;
         }
 
         /* POSITION HEADER */
@@ -177,7 +172,7 @@
             }
 
             .experience-item {
-                padding: 23px 20px;
+                padding: 0;
             }
 
             .experience-header {
@@ -240,11 +235,11 @@
         }
         .volunteering-content {
             display: grid;
-            gap: 20px;
+            gap: 30px;
             min-width: 0;
         }
         .activity-card {
-            padding: 26px 28px;
+            padding: 0;
         }
         .volunteering-image {
             margin: 0;
@@ -266,7 +261,7 @@
         }
         @media (max-width: 650px) {
             .experience-section + .experience-section { margin-top: 42px; }
-            .activity-card { padding: 23px 20px; }
+            .activity-card { padding: 0; }
             .activity-list li { margin-bottom: 9px; }
         }
 
