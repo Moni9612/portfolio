@@ -236,27 +236,83 @@
         }
         .volunteering-2026-content { min-width: 0; }
         .volunteering-2026-content li { overflow-wrap: break-word; }
-        .volunteering-2026-image {
-            min-width: 0;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: transparent;
-            border: 0;
-            box-shadow: none;
-        }
-        .volunteering-2026-image img {
-            display: block;
-            width: 100%;
-            max-width: 100%;
-            height: auto;
-            object-fit: contain;
-            border: 0;
-            box-shadow: none;
-        }
+        /* 2026: Equal space for content and image */
+
+.volunteering-2026-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 25px;
+    align-items: stretch;
+    width: 100%;
+}
+
+/* Left side content */
+
+.volunteering-2026-content {
+    min-width: 0;
+}
+
+/* Right side image container */
+
+.volunteering-2026-image {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+/* Enlarge image proportionally */
+
+.volunteering-2026-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: none;
+    max-height: none;
+
+    object-fit: contain;
+    object-position: center;
+
+    border: none;
+    box-shadow: none;
+}
+
+/* 2025 remains full width */
+
+.volunteering-2025-content {
+    width: 100%;
+    margin-top: 35px;
+}
+
+/* Mobile responsive */
+
+@media (max-width: 768px) {
+    .volunteering-2026-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .volunteering-2026-image {
+        height: auto;
+    }
+
+    .volunteering-2026-image img {
+        width: 100%;
+        height: auto;
+    }
+}
         /* 2025 follows below and occupies the full content width */
         .volunteering-2025-content {
             width: 100%;
