@@ -226,105 +226,31 @@
             color: #ffffff;
             font-weight: 700;
         }
-        /* Volunteering: 2026 split evenly between text and collage */
-        .volunteering-2026-layout {
-            display: grid;
-            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-            gap: 35px;
-            align-items: center;
-            width: 100%;
+        /* Text wraps alongside the image and fills the width below it. */
+        .volunteering-flow { display: flow-root; width: 100%; }
+        .volunteering-flow .volunteering-2026-image {
+            float: right;
+            width: calc(50% - 12px);
+            margin: 0 0 18px 24px;
+            padding: 0;
+            border: 0;
+            background: transparent;
+            box-shadow: none;
         }
-        .volunteering-2026-content { min-width: 0; }
-        .volunteering-2026-content li { overflow-wrap: break-word; }
-        /* 2026: Equal space for content and image */
-
-.volunteering-2026-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 25px;
-    align-items: stretch;
-    width: 100%;
-}
-
-/* Left side content */
-
-.volunteering-2026-content {
-    min-width: 0;
-}
-
-/* Right side image container */
-
-.volunteering-2026-image {
-    width: 100%;
-    height: 100%;
-    min-width: 0;
-
-    margin: 0;
-    padding: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: transparent;
-    border: none;
-    box-shadow: none;
-}
-
-/* Enlarge image proportionally */
-
-.volunteering-2026-image img {
-    display: block;
-
-    width: 100%;
-    height: 100%;
-
-    max-width: none;
-    max-height: none;
-
-    object-fit: contain;
-    object-position: center;
-
-    border: none;
-    box-shadow: none;
-}
-
-/* 2025 remains full width */
-
-.volunteering-2025-content {
-    width: 100%;
-    margin-top: 35px;
-}
-
-/* Mobile responsive */
-
-@media (max-width: 768px) {
-    .volunteering-2026-layout {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .volunteering-2026-image {
-        height: auto;
-    }
-
-    .volunteering-2026-image img {
-        width: 100%;
-        height: auto;
-    }
-}
-        /* 2025 follows below and occupies the full content width */
-        .volunteering-2025-content {
+        .volunteering-flow .volunteering-2026-image img {
+            display: block;
             width: 100%;
-            margin-top: 35px;
+            height: auto;
+            object-fit: contain;
+            border: 0;
         }
-        .activity-card { padding: 0; }
+        .volunteering-flow .volunteering-year { margin: 0 0 22px; }
         @media (max-width: 768px) {
-            .volunteering-2026-layout {
-                grid-template-columns: minmax(0, 1fr);
-                gap: 25px;
+            .volunteering-flow .volunteering-2026-image {
+                float: none;
+                width: 100%;
+                margin: 0 0 24px;
             }
-            .volunteering-2025-content { margin-top: 35px; }
         }
 
     </style>
@@ -612,9 +538,15 @@
             <section class="experience-section" id="volunteering" aria-labelledby="volunteering-heading">
                 <h2 class="section-heading" id="volunteering-heading">Volunteering &amp; Community Engagement</h2>
 
-                <!-- 2026: 50% text and 50% image -->
-                <div class="volunteering-2026-layout">
-                    <div class="volunteering-2026-content">
+                <!-- The collage floats alongside 2026 and early 2025 content.
+                     Remaining 2025 entries fill the page below the image. -->
+                <div class="volunteering-flow">
+                    <figure class="volunteering-2026-image">
+                        <img src="assets/images/VolunteeringCollage.png"
+                             alt="Volunteering and Community Engagement"
+                             loading="lazy">
+                    </figure>
+                    <div class="volunteering-year volunteering-2026-content">
                         <h3 class="activity-year">2026</h3>
                         <ul class="experience-details activity-list">
                             <li><strong>Sri Lanka Festival 2026</strong> – Sri Lanka High Commission, Canberra | Represented the Collaborative Robotics Lab (CRL) and supported robotics outreach and community engagement activities.</li>
@@ -624,25 +556,16 @@
                             <li><strong>UC Open Day 2026</strong> – Faculty of Science and Technology, University of Canberra | Supported interactive robotics demonstrations and engagement activities for prospective students, families, and visitors.</li>
                         </ul>
                     </div>
-                    <figure class="volunteering-2026-image">
-    <img
-        src="https://moni9612.github.io/portfolio/assets/images/VolunteeringCollage.png"
-        alt="Volunteering and Community Engagement"
-        loading="lazy"
-    >
-</figure>
-                </div>
-
-                <!-- 2025: full-width text -->
-                <div class="volunteering-2025-content">
-                    <h3 class="activity-year">2025</h3>
-                    <ul class="experience-details activity-list">
+                    <div class="volunteering-year volunteering-2025-content">
+                        <h3 class="activity-year">2025</h3>
+                        <ul class="experience-details activity-list">
                         <li><strong>Collaborative Robotics Lab (CRL) Launch</strong> – University of Canberra | Supported the lab launch and research engagement activities with academic and industry guests.</li>
                         <li><strong>UC Open Day 2025</strong> – University of Canberra | Participated in robotics outreach activities, engaging with prospective students and visitors.</li>
                         <li><strong>AgriFutures Australia Stakeholder Summit Visit</strong> – Collaborative Robotics Lab, University of Canberra | Supported the organisation and hosting of the AgriFutures Australia delegation and research engagement activities.</li>
                         <li><strong>ACT Political Representatives' Visit</strong> – Collaborative Robotics Lab, University of Canberra | Participated in the robotics research showcase and engagement activities with visiting political representatives.</li>
                         <li><strong>Harvest Day Out 2025</strong> – Lanyon Homestead, Canberra | Conducted interactive apple-picking demonstrations using a Kinova robotic arm and Xbox controller, engaging children and families in hands-on robotics activities.</li>
                     </ul>
+                    </div>
                 </div>
             </section>
 
